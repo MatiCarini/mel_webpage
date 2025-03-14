@@ -80,6 +80,10 @@
   .hero {
     font-size: 14px;
   }
+  .background {
+    background: url("../images/hero2.jpg") fixed top/cover;
+
+  }
   .texto {
     height: 25%;
     font-size: 1em;

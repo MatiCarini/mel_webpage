@@ -113,7 +113,7 @@ img {
 
 @media (max-width: 768px) {
   #main-header {
-    height: 4.5em;
+    height: 3.5em;
     box-shadow: 0 0.1em 0.2em #000a;
   }
   .header-content {
@@ -151,6 +151,7 @@ img {
     order: 1;
   }
   .hamburger-menu {
+    font-size: 1.5em;
     display: block;
     order: 2;
   }
