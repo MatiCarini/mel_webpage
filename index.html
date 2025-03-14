@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metalúrgica Lobato</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript" src="contactController.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="header-content">
+        <a href="">
+          <img src="../images/11.svg" alt="logo" />
+        </a>
+        <nav id="header-nav" class="header-nav" aria-label="main-nav">
+          <ul>
+            <li>
+              <a href="#servicios"> Servicios </a>
+            </li>
+            <li>
+              <a href="#nosotros">Nosotros </a>
+            </li>
+            <li>
+              <a href="#galeria"> Galeria </a>
+            </li>
+            <li>
+              <a href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hamburger-menu" id="hamburger-menu">☰</div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-content">
+          <img class="hero-logo" src="../images/22.svg" alt="big-logo" />
+          <div class="texto">
+            <h2 class="title">
+              Especialistas en fabricación de piezas mecanizadas de alta
+              precisión.
+            </h2>
+            <h3 class="subtitle">
+              Desde 1986, brindando atención personalizada a todo tipo de
+              industrias.
+            </h3>
+          </div>
+          <button class="hero-button">
+            <a href="#servicios" class="btn"
+              ><i class="fa-solid fa-angle-down"></i>
+            </a>
+          </button>
+        </div>
+        <div class="background"></div>
+      </div>
+    </section>
+    <!-- Servicios -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <div class="services-title">
+          <h2 class="title">+30 AÑOS trabajando para la industria.</h2>
+          <h3 class="subtitle">
+            Especialistas en la fabricación de piezas mecanizadas de alta
+            precisión.
+          </h3>
+        </div>
+        <ul class="card-container">
+          <li class="card">
+            <img
+              class="card-image"
+              src="/images/planificacionydiseño.png"
+              title=""
+              alt=""
+            />
+            <div class="card-content">
+              <h3 class="card-title">
+                <strong>Planificación y diseño</strong>
+              </h3>
+              <p class="card-info">
+                <strong>
+                  Soluciones de diseño y desarrollo usando tecnología CAD/CAM.
+                </strong>
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              class="card-image"
+              src="../images/machining2.png"
+              title=""
+              alt=""
+            />
+            <div class="card-content">
+              <h3 class="card-title">
+                <strong>Mecanizado y fabricación</strong>
+              </h3>
+              <p class="card-info">
+                <strong>
+                  Trabajamos con materiales como acero, aluminio, titanio, y
+                  más.
+                </strong>
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              class="card-image"
+              src="../images/equipment.png"
+              title=""
+              alt=""
+            />
+            <div class="card-content">
+              <h3 class="card-title">
+                <strong>Equipamiento</strong>
+              </h3>
+              <p class="card-info">
+                <strong>
+                  Equipamiento avanzado, CNC y electroerosión para alta
+                  precisión.
+                  <br /><br />Piezas únicas en series cortas o medias, con el
+                  máximo nivel de precisión.
+                </strong>
+              </p>
+            </div>
+          </li>
+          <li class="card">
+            <img src="/images/repair.png" title="" alt="" class="card-image" />
+            <div class="card-content">
+              <h3 class="card-title">
+                <strong>Overhauling</strong>
+              </h3>
+              <p class="card-info">
+                <strong>
+                  Nos especializamos en la restauracion integral y reparacion de
+                  maquinaria industrial alimenticia. <br />
+                  <br />
+                </strong>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="section bg-light">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">Nuestra empresa</h2>
+          <h4 class="subtitle">
+            Desde 1986, nos dedicamos a la fabricación de todo tipo de piezas
+            mecanizadas de alta precisión. Más de treinta años de experiencia en
+            el rubro.
+          </h4>
+
+          <h4 class="subtitle">
+            Nos especializamos en brindar atención personalizada a pequeñas,
+            medianas y grandes empresas, adecuando las series a las necesidades
+            del cliente.
+          </h4>
+          <button class="continue-button">
+            <a href="#industrias" class="btn"
+              ><i class="fa-solid fa-angle-down"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industrias -->
+    <section id="industrias" class="section">
+      <div class="container">
+        <h2 class="industrias-title">
+          Trabajamos con clientes de las siguientes industrias.
+        </h2>
+
+        <ul class="list-content">
+          <li>
+            <img src="../images/food.png" alt="" />
+            <h2>Producción de Alimentos</h2>
+          </li>
+          <li>
+            <img src="../images/packaging.png" alt="" />
+            <h2>Embalaje y Envasado</h2>
+          </li>
+          <li>
+            <img src="../images/printing.png" alt="" />
+            <h2>Gráfica e Impresión</h2>
+          </li>
+          <li>
+            <img src="../images/microscope.png" alt="" />
+            <h2>Farmacéutica y Laboratorio</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="section bg-light">
+      <div class="cards-container">
+        <h2>Galeria</h2>
+        <ul>
+          <li class="card">
+            <img src="../images/galeria/1.jpg" alt="img2" />
+          </li>
+          <li class="card">
+            <img src="../images/galeria/2.jpg" alt="img3" />
+          </li>
+          <li class="card">
+            <img src="../images/galeria/4.jpg" alt="img5" />
+          </li>
+        </ul>
+        <button class="galeria-button">
+          <a href="galeria.html" target="_blank" rel="noopener noreferrer"
+            >Ver más</a
+          >
+        </button>
+      </div>
+    </section>
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <!-- Container 1-->
+        <div class="container-box">
+          <iframe
+            title="ubication"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1388.46258627731!2d-59.42991974168382!3d-34.66186103884534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc73086357bf09%3A0x40ab8e6adf610baf!2sC.%20102%20%26%20C.%2015%2C%20Mercedes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1733071137801!5m2!1ses!2sar"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <!-- Container 2-->
+        <div class="container-box">
+          <h2>Contáctenos</h2>
+          <div class="contact-icons">
+            <div class="contact-card">
+              <div class="contact-call contact-icon"></div>
+              <div class="contact-card-content">
+                <h4>WhatsApp</h4>
+                <p>
+                  <a href="https://wa.me/5492324541053" target="_blank"
+                    >+5492324541053</a
+                  >
+                </p>
+                <p>
+                  <a href="https://wa.me/5492324673966" target="_blank"
+                    >+5492324673966</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-mail contact-icon"></div>
+              <div class="contact-card-content">
+                <h4>Email</h4>
+                <p>metalurgicalobato@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-location contact-icon"></div>
+              <div class="contact-card-content">
+                <h4>Dirección</h4>
+                <p>
+                  Calle 15 y 102 <br />
+                  Mercedes, Buenos Aires
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="subtitle">
+            Esperamos con interés saber más sobre tu proyecto. Permítanos un día
+            hábil para responder a su solicitud. Si es un proyecto urgente por
+            favor llámenos.
+          </p>
+          <form id="contact-form">
+            <div class="input-container">
+              <label>
+                Nombre completo
+                <input
+                  type="text"
+                  class="contact-input"
+                  name="user_name"
+                  placeholder="Juan Perez"
+                  required
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  class="contact-input"
+                  name="user_email"
+                  placeholder="ejemplo@mail.com"
+                  required
+                />
+              </label>
+            </div>
+            <label for="mensaje">Envíenos su mensaje</label>
+            <textarea
+              id="mensaje"
+              name="message"
+              placeholder="Déjenos su mensaje aqui..."
+              required
+            ></textarea>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-container">
+        <img class="footer-logo" src="../images/11.svg" alt="logo" />
+        <nav aria-label="footer-navigation" class="footer-navigation">
+          <ul class="footer-list">
+            <li><a class="link" href="#nosotros">Nosotros</a></li>
+            <li><a class="link" href="#servicios">Servicios</a></li>
+            <li><a class="link" href="#galeria">Galeria</a></li>
+            <li><a class="link" href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="contact-container">
+          <div class="footer-phone">
+            <img src="/images/whatsapp.png" alt="" />
+            <p>
+              Matias
+              <a href="https://wa.me/5492324541053" target="_blank"
+                >+5492324541053</a
+              >
+              | Fausto
+              <a href="https://wa.me/5492324673966" target="_blank"
+                >+5492324673966</a
+              >
+            </p>
+          </div>
+          <div class="footer-mail">
+            <img src="/images/mail.svg" alt="" />
+            <p>Email metalurgicalobato@gmail.com</p>
+          </div>
+          <div class="footer-location">
+            <img src="/images/location.svg" alt="" />
+            <p class="footer-address">
+              Dirección: Calle 15 y 102, Mercedes, Buenos Aires
+            </p>
+          </div>
+        </div>
+        <div class="redes">
+          <a
+            href="https://www.instagram.com/metalurgicalobato/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <p class="footer-rights">Metalúrgica Eduardo Lobato e hijos. © 2025</p>
+    </footer>
+  </body>
+  <script type="text/javascript" src="headerController.js"></script>
+</html>

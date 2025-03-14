@@ -1,0 +1,49 @@
+@import "header.css";
+@import "hero.css";
+@import "services.css";
+@import "slidecard.css";
+@import "contact.css";
+@import "about-us.css";
+@import "industries.css";
+@import "galery.css";
+@import "footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh;
+  text-align: center; 
+  scroll-margin-top: 5rem;
+}
+.title{
+  color: #ddd;
+  font-size: 1.8em;
+  margin: auto;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #aaa;
+  font-weight: 500;
+  margin: auto;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.icon {
+  width: 25%;
+  object-fit: cover;
+}
+.dark {
+  background-color: #0f0f0f;
+  color: white;
+}
+

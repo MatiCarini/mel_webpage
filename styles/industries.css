@@ -1,0 +1,48 @@
+#industrias {
+  height: 80vh;
+  align-content: center;
+}
+#industrias .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#industrias .industrias-title {
+  text-transform: uppercase;
+  padding: 5% 0;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+
+#industrias .container .list-content {
+  box-sizing: border-box;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  min-height: 0;
+  width: 70%;
+  margin: auto;
+}
+#industrias .list-content li {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#industrias .list-content li img {
+  width:50%;
+  object-position: center;
+  object-fit: contain;
+}
+#industrias .list-content li h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #202f99;
+  margin-top: 4%;
+  padding: 0 3%;
+}

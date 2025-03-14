@@ -1,0 +1,55 @@
+#galeria .cards-container {
+  width: 100%;
+}
+#galeria .cards-container h2{
+    font-size: 2.5rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: monospace;
+}
+#galeria .cards-container ul {
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 50vh;
+  width: 80%;
+}
+#galeria .cards-container ul li {
+  align-content: center;
+  padding: 1rem;
+  background-color: #bbb;
+    border-radius: 1rem;
+  list-style: none;
+  width: 31%;
+}
+#galeria .cards-container ul li img {
+    box-shadow: 0 0 15px 0 #0008;
+    border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  height: 95%;
+  width: 95%;
+  margin: auto;
+}
+
+#galeria .cards-container .galeria-button{
+  padding: 0.8% 1%;
+  background: #222e82;
+  margin : 3% auto;
+  transition: all 0.3s;
+
+  border: none;
+}
+#galeria .cards-container .galeria-button a{
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#galeria .cards-container .galeria-button:hover{
+  font-weight: bold;
+  scale: 1.1;
+}
