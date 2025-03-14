@@ -68,13 +68,13 @@
 }
 
 #contacto .contact-call {
-  background: url("/images/whatsapp.png");
+  background: url("../images/whatsapp.png");
 }
 #contacto .contact-mail {
-  background: url("/images/mail.svg");
+  background: url("../images/mail.svg");
 }
 #contacto .contact-location {
-  background: url("/images/location.svg");
+  background: url("../images/location.svg");
 }
 #contacto .contact-icon {
   width: 25%;

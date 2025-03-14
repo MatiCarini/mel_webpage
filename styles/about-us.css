@@ -12,7 +12,7 @@
   box-shadow: 0 0 15px #000;
   height: 60vh;
   background: linear-gradient(transparent, #200c 40%),
-    url("/images/12.jpg") top/cover no-repeat;
+    url("../images/12.jpg") top/cover no-repeat;
   padding-left: 7%;
   text-align: left;
   color: white;
