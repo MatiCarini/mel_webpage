@@ -13,16 +13,16 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
 .section {
   height: 100vh;
-  text-align: center; 
+  text-align: center;
   scroll-margin-top: 5rem;
 }
-.title{
+.title {
   color: #ddd;
   font-size: 1.8em;
   margin: auto;
@@ -47,3 +47,11 @@ iframe {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .section {
+    width: 100vw;
+    text-align: center;
+    scroll-margin-top: 5rem;
+  }
+
+}
