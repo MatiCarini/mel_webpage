@@ -71,9 +71,8 @@
   font-size: 2.5em;
 }
 .texto {
-  height: 55%;
-  width: 60%;
-  max-width: 60%;
+  max-width: 75%;
+  height: 80%;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -108,8 +107,8 @@
     background: url("../images/hero2.jpg") contain fixed;
   }
   .texto {
-    height: 25%;
-    font-size: 1em;
+    max-width: 75%;
+    height: 60%;
   }
 
   .hero-logo {
