@@ -20,19 +20,17 @@ html {
 .section {
   height: 100vh;
   text-align: center;
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 6.5rem;
 }
 .title {
   color: #ddd;
   font-size: 1.8em;
-  margin: auto;
 }
 
 .subtitle {
   font-size: 1.2em;
   color: #aaa;
   font-weight: 500;
-  margin: auto;
 }
 iframe {
   width: 100%;
