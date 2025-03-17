@@ -34,14 +34,11 @@
 }
 .hero-logo {
   width: 50%;
-  margin-top: 9%;
+  margin-top: 12rem;
   object-fit: contain;
 }
 
 .btn {
-  width: 100%;
-  height: 100%;
-  padding: 1%;
   text-align: center;
   position: relative;
   display: flex;
@@ -53,6 +50,7 @@
   text-decoration: none;
   color: white;
   transition: all 0.3s;
+  flex-grow: 1;
 }
 .btn::before {
   content: "";
@@ -66,22 +64,20 @@
 .btn:hover {
   cursor: pointer;
 }
-.btn:hover::before{
+.btn:hover::before {
   opacity: 1;
-
 }
 .btn:hover i {
   font-size: 2.5em;
 }
 .texto {
-  height: 55%;
-  width: 60%;
-  max-width: 60%;
+  max-width: 75%;
+  height: 80%;
   background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .btn i {
   font-size: 2em;
@@ -105,22 +101,19 @@
 /*hero*/
 @media (max-width: 768px) {
   .hero {
-    font-size: 14px;
+    font-size: 18px;
   }
   .background {
-    background: url("../images/hero2.jpg");
+    background: url("../images/hero2.jpg") contain fixed;
   }
   .texto {
-    height: 25%;
-    font-size: 1em;
+    max-width: 75%;
+    height: 60%;
   }
-  .hero-content .title,
-  .hero-content .subtitle {
-    margin: 2% auto;
-  }
+
   .hero-logo {
-    width: 90%;
-    margin-top: 9rem;
+    width: 95%;
+    margin-top: 7em;
   }
 }
 /* #202f88;*/
