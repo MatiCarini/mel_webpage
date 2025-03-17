@@ -104,10 +104,13 @@
     font-size: 18px;
   }
   .background {
-    background: url("../images/hero2.jpg") contain fixed;
+    background: url("../images/hero2.jpg") center, top /contain fixed;
+  }
+  .btn {
+    height: 50%;
   }
   .texto {
-    max-width: 75%;
+    max-width: 90%;
     height: 60%;
   }
 
