@@ -71,12 +71,14 @@
   font-size: 2.5em;
 }
 .texto {
+  height: 55%;
+  width: 60%;
   max-width: 60%;
   background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .btn i {
   font-size: 2em;
@@ -106,8 +108,8 @@
     background: url("../images/hero2.jpg") contain fixed;
   }
   .texto {
-    height: 45%;
-    max-width: 80%;
+    height: 25%;
+    font-size: 1em;
   }
 
   .hero-logo {
