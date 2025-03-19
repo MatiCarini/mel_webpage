@@ -49,8 +49,9 @@
 }
 
 #servicios .card-image {
-  width: 35%; /* Altura fija para la imagen (ajusta según necesidades) */
-  object-fit: contain; /* Ajusta la imagen sin distorsión */
+  width: 35%;
+  height: auto;
+  object-fit: contain;
   margin: 0 auto;
 }
 
@@ -84,4 +85,164 @@
 }
 #servicios .no-border {
   border: none;
+}
+
+@media ((min-width: 768px ) and ( max-width: 1024px)) {
+  #servicios {
+    width: 100vw;
+    height: auto;
+  }
+  #servicios .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #servicios .services-title {
+    background: #030303;
+    color: white;
+    box-shadow: 0 2px 16px #000b;
+    font-size: 2em;
+    width: 100%;
+    margin: 0;
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Opcional: centra horizontalmente */
+    text-align: center;
+    padding: 3% 0;
+  }
+  #servicios .container .title {
+    font-size: 3em;
+    font-weight: 100;
+    padding: 4% 0;
+    text-transform: uppercase;
+    color: #999;
+  }
+  
+  #servicios .card-container {
+    box-sizing: border-box;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 70%;
+  }
+
+  #servicios .card {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+  }
+
+  #servicios .card .card-image {
+    height: 50%;
+    object-fit: contain; /* Ajusta la imagen sin distorsión */
+  }
+
+  #servicios .card-content {
+    width: 70%;
+    margin-top: 2.5%;
+    font-size: 20px;
+  }
+  #servicios .card-container .card-info strong {
+    font-weight: 100;
+    color: #444;
+  }
+  #servicios .card-container .card-title,
+  #servicios .card-container .card-info {
+    padding: 1%;
+  }
+  #servicios .card-container .card-title {
+    letter-spacing: -0.05rem;
+    margin-top: 1rem;
+    font-size: 1.5em;
+    font-weight: 600;
+    box-sizing: border-box;
+    color: #345;
+  }
+  #servicios .card-info {
+    margin-top: 1.3rem;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  #servicios {
+    width: 100vw;
+    height: auto;
+  }
+  #servicios .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #servicios .services-title {
+    background: #030303;
+    color: white;
+    box-shadow: 0 2px 16px #000b;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 0;
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Opcional: centra horizontalmente */
+    text-align: center;
+    padding: 7% 0;
+  }
+  #servicios .container .title {
+    font-size: 2.5em;
+    font-weight: 100;
+    padding: 9% 0;
+    text-transform: uppercase;
+    color: #999;
+  }
+  
+  #servicios .card-container {
+    box-sizing: border-box;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+
+  #servicios .card {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+  }
+
+  #servicios .card .card-image {
+    height: 50%;
+    object-fit: contain; /* Ajusta la imagen sin distorsión */
+  }
+
+  #servicios .card-content {
+    width: 70%;
+    margin-top: 1.5%;
+    font-size: 20px;
+  }
+  #servicios .card-container .card-info strong {
+    font-weight: 500;
+    color: #444;
+  }
+  #servicios .card-container .card-title,
+  #servicios .card-container .card-info {
+    padding: 1%;
+  }
+  #servicios .card-container .card-title {
+    letter-spacing: -0.05rem;
+    margin-top: 1rem;
+    font-size: 1.5em;
+    font-weight: 600;
+    box-sizing: border-box;
+    color: #345;
+  }
+  #servicios .card-info {
+    margin-top: 1.3rem;
+    font-size: 1.1em;
+  }
 }

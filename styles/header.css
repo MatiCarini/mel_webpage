@@ -3,7 +3,7 @@
 #main-header {
   position: fixed;
   top: 0;
-  font-size: 20px;
+  font-size: 18px;
   height: 7rem;
   width: 100vw;
   background: #000c;
@@ -14,7 +14,6 @@
 }
 #main-header .header-content {
   width: 90%;
-  padding: 0 4%;
   padding-left: 10%;
   height: 90%;
   margin: auto;
@@ -71,6 +70,7 @@
   text-align: center;
   display: block;
   align-content: center;
+  font-size: 1.2em;
 }
 #main-header .header-content .header-content img:hover {
   scale: 1.1;
@@ -95,28 +95,49 @@
   #main-header {
     height: 6rem;
     box-shadow: 0 0.1em 0.2em #000a;
+    font-size: 20px;
   }
   #main-header .header-content {
-    padding: 0 10em;
+    width: 90%;
     display: flex;
+    flex-direction: row-reverse;
+    padding: 0 6em;
   }
-  #main-header .header-content .header-logo {
-    height: 60%;
-    object-fit: contain;
-    cursor: pointer;
+  #main-header .header-content .header-nav {
+    display: none;
+    background: #151515;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 25%;
+    height: 90vh;
   }
   #main-header .header-content .header-nav ul {
-    display: flex;
-    list-style: none;
+    padding: 2em 0;
+    width: 100%;
+    gap: 1rem;
+    flex-direction: column;
+    height: auto;
   }
+  #main-header .header-content .hamburger-menu {
+    font-size: 2.5em;
+    display: block;
+    order: 2;
+  }
+
+  
   #main-header .header-content #main-header .scrolled {
     height: 5rem;
+  }
+  #main-header .header-content .header-nav.active {
+    display: flex;
+    flex-direction: column;
+
   }
 }
 
 @media (max-width: 768px) {
   #main-header {
-    height: 5rem;
     box-shadow: 0 0.1em 0.2em #000a;
   }
   #main-header .header-content {
@@ -154,15 +175,12 @@
     order: 1;
   }
   #main-header .header-content .hamburger-menu {
-    font-size: 1.5em;
+    font-size: 3em;
     display: block;
     order: 2;
   }
   #main-header .header-content .header-nav.active {
     display: flex;
-  }
-  #main-header.scrolled {
-    height: 4rem;
   }
 }
 
