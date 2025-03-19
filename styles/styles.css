@@ -19,7 +19,9 @@ html, body {
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
 }
-
+body {
+  position: relative;
+}
 img {
   object-fit: contain;
 }
