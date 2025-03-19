@@ -88,9 +88,13 @@
 }
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #main-header {
-    height: 6rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 6rem;
+      z-index: 1000;
     box-shadow: 0 0.1em 0.2em #000a;
-    position: fixed;
   }
   .header-content {
     padding: 0 10em;
@@ -105,11 +109,19 @@
     display: flex;
     list-style: none;
   }
+  #main-header.scrolled {
+    height: 5rem;
+  }
 }
+
 
 @media (max-width: 768px) {
   #main-header {
-    height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000; 
     box-shadow: 0 0.1em 0.2em #000a;
   }
   .header-content {
@@ -153,6 +165,9 @@
   }
   .header-nav.active {
     display: flex;
+  }
+  #main-header.scrolled {
+    height: 4rem;
   }
 }
 
