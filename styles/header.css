@@ -1,7 +1,5 @@
 /*header*/
-img {
-  object-fit: contain;
-}
+
 #main-header {
   position: fixed;
   top: 0;
@@ -14,7 +12,7 @@ img {
   align-content: center;
   z-index: 1000;
 }
-.header-content {
+#main-header .header-content {
   width: 90%;
   padding: 0 4%;
   padding-left: 10%;
@@ -84,15 +82,15 @@ img {
   border-bottom: 1px solid white; /* Aplica el borde cuando el li está en hover */
 }
 #main-header.scrolled {
-  height: 6.5rem;
+  height: 6rem;
   font-size: 18px;
   background: #000;
 }
-
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #main-header {
-    height: 5.5em;
+    height: 6rem;
     box-shadow: 0 0.1em 0.2em #000a;
+    position: fixed;
   }
   .header-content {
     padding: 0 10em;
@@ -111,7 +109,7 @@ img {
 
 @media (max-width: 768px) {
   #main-header {
-    height: 3.5em;
+    height: 6rem;
     box-shadow: 0 0.1em 0.2em #000a;
   }
   .header-content {

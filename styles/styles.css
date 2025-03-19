@@ -16,21 +16,23 @@
 html {
   scroll-behavior: smooth;
 }
-
+img {
+  object-fit: contain;
+}
 .section {
   height: 100vh;
   text-align: center;
-  scroll-margin-top: 6.5rem;
+  scroll-margin-top: 6rem;
 }
 .title {
-  color: #ddd;
   font-size: 1.8em;
+  font-family:  monospace;
+
 }
 
 .subtitle {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1.2em;
-  color: #aaa;
-  font-weight: 500;
 }
 iframe {
   width: 100%;
@@ -40,10 +42,12 @@ iframe {
   width: 25%;
   object-fit: cover;
 }
+
 .dark {
   background-color: #0f0f0f;
   color: white;
 }
+
 
 @media (max-width: 768px) {
   .section {
@@ -51,5 +55,4 @@ iframe {
     text-align: center;
     scroll-margin-top: 5rem;
   }
-
 }

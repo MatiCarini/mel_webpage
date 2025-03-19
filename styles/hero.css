@@ -1,10 +1,10 @@
 /*hero*/
-.hero {
+#hero {
   height: 100vh;
   font-size: 24px;
 }
 
-.hero-bg {
+#hero .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,18 +12,7 @@
   width: 100%;
   background: linear-gradient(#c7c8cc7f 45%, #000d 75%);
 }
-.background {
-  position: absolute;
-  background: url("../images/hero2.jpg") fixed left/cover;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  filter: blur(3px);
-  z-index: -1000;
-}
-.hero-content {
+#hero .hero-bg .hero-content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -32,13 +21,14 @@
   justify-content: center;
   position: relative;
 }
-.hero-logo {
+
+#hero .hero-bg .hero-content .hero-logo {
   width: 50%;
-  margin-top: 12rem;
+  margin-top: 10rem;
   object-fit: contain;
 }
 
-.btn {
+#hero .hero-bg .hero-content .btn-action {
   width: 100%;
   text-align: center;
   position: relative;
@@ -53,7 +43,8 @@
   transition: all 0.3s;
   flex-grow: 1;
 }
-.btn::before {
+
+#hero .hero-bg .hero-content .btn-action::before {
   content: "";
   position: absolute;
   inset: 0; /* Ocupa todo el espacio del botón */
@@ -62,25 +53,38 @@
   transition: opacity 0.3s ease; /* Suaviza la transición */
   z-index: -1; /* Se coloca detrás del contenido */
 }
-.btn:hover {
+#hero .hero-bg .hero-content .btn-action:hover {
   cursor: pointer;
 }
-.btn:hover::before {
+#hero .hero-bg .hero-content .btn-action:hover::before {
   opacity: 1;
 }
-.btn:hover i {
+#hero .hero-bg .hero-content .btn-action:hover i {
   font-size: 2.5em;
 }
-.texto {
+#hero .hero-bg .hero-content .btn-action .texto {
   max-width: 75%;
-  height: 80%;
   background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  font-size: 22px;
 }
-.btn i {
+#hero .hero-bg .hero-content .btn-action .texto .title {
+  font-weight: 600;
+  font-size: 1.5em;
+  font-family: monospace;
+  padding: 0.5em;
+}
+#hero .hero-bg .hero-content .btn-action .texto .subtitle {
+  font-weight: 100;
+  font-family: monospace;
+  font-size: 1em;
+  color: #777;
+  padding: 0.5em;
+}
+#hero .hero-bg .hero-content .btn-action i {
   font-size: 2em;
   position: absolute;
   bottom: 0;
@@ -88,36 +92,37 @@
   transform: translateX(-50%);
   transition: all 0.3s;
 }
+#hero .hero-bg .background {
+  position: absolute;
+  background: url("../images/hero2.jpg") fixed left/cover;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+  z-index: -1000;
+}
 
-.hero-content .title {
-  font-weight: 600;
-  font-size: 1.5em;
-  font-family: monospace;
-}
-.hero-content .subtitle {
-  font-weight: 100;
-  font-family: monospace;
-  font-size: 1em;
-}
 /*hero*/
 @media (max-width: 768px) {
-  .hero {
+  #hero {
     font-size: 18px;
   }
-  .background {
-    background: url("../images/hero2.jpg") center, top /contain fixed;
+  #hero .hero-bg .hero-content .hero-logo {
+    width: 95%;
   }
-  .btn {
+  #hero .hero-bg .background {
+    background: url("../images/hero2.jpg") center, top / contain fixed;
+  }
+  #hero .hero-bg .hero-content .btn-action {
     height: 50%;
   }
-  .texto {
+  #hero .hero-bg .hero-content .btn-action .texto {
+    font-size: 16px;
     max-width: 90%;
     height: 60%;
   }
 
-  .hero-logo {
-    width: 95%;
-    margin-top: 7em;
-  }
 }
 /* #202f88;*/
