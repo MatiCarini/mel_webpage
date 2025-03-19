@@ -1,6 +1,7 @@
 #nosotros {
   align-content: center;
   height: 90vh;
+  font-size: 22px;
 }
 #nosotros .container {
   position: relative;
@@ -17,17 +18,16 @@
   text-align: left;
   color: white;
   align-content: center;
-  font-size: 1.3rem;
+  font-size: 1em;
 }
-#nosotros .container h2 {
-  font-family: "Courier New", Courier, monospace;
-}
+
 #nosotros .container h4 {
   font-weight: 100;
   width: 60%;
-  margin: 1% 2%;
+  margin: 2% 1%;
+  font-size: 1.1em;
 }
-.continue-button{
+.continue-button {
   width: 100%;
   padding: 0.5%;
   position: absolute;
@@ -35,12 +35,110 @@
   left: 0;
   background: transparent;
   border: none;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-.continue-button a{
+.continue-button a {
   color: #fff9;
   font-size: 3em;
 }
-.continue-button:hover{
-  font-size: 1.1rem;
+.continue-button:hover {
+  font-size: 1.1em;
+}
+@media ((min-width: 768px ) and ( max-width: 1024px)) {
+  #nosotros {
+    align-content: center;
+    height: 90vh;
+    font-size: 18px;
+  }
+  #nosotros .container {
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    align-content: center;
+  }
+  #nosotros .container .content {
+    box-shadow: 0 0 15px #000;
+    height: 60vh;
+    background: linear-gradient(transparent, #200c 40%),
+      url("../images/12.jpg") top/cover no-repeat;
+    padding-left: 7%;
+    text-align: left;
+    color: white;
+    align-content: center;
+    font-size: 1.2em;
+  }
+  #nosotros .container h2 {
+    font-family: "Courier New", Courier, monospace;
+  }
+  #nosotros .container h4 {
+    font-weight: 100;
+    width: 60%;
+    margin: 2% 1%;
+    font-size: 1em;
+  }
+  .continue-button {
+    width: 100%;
+    padding: 0.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    transition: 0.5s;
+  }
+  .continue-button a {
+    color: #fff9;
+    font-size: 3em;
+  }
+ 
+}
+
+@media (max-width: 768px) {
+  #nosotros {
+    align-content: center;
+    height: 90vh;
+    font-size: 16px;
+  }
+  #nosotros .container {
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    align-content: center;
+  }
+  #nosotros .container .content {
+    box-shadow: 0 0 15px #000;
+    height: 60vh;
+    background: linear-gradient(transparent, #200c 40%),
+      url("../images/12.jpg") top/cover no-repeat;
+    padding-left: 7%;
+    text-align: left;
+    color: white;
+    align-content: center;
+    font-size: 1.1em;
+  }
+  #nosotros .container h2 {
+    font-family: "Courier New", Courier, monospace;
+  }
+  #nosotros .container h4 {
+    font-weight: 500;
+    width: 90%;
+    margin: 4% 2%;
+    font-size: 1.2em;
+    color: #ddd;
+  }
+  .continue-button {
+    width: 100%;
+    padding: 0.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    transition: 0.5s;
+  }
+  .continue-button a {
+    color: #fff9;
+    font-size: 2em;
+  }
+ 
 }
