@@ -3,26 +3,39 @@ footer {
   color: black;
   padding: 1rem 0;
   height: 50vh;
+  width: 100%;
   align-content: center;
 }
 
+#main-footer .footer-rights {
+  width: 80%;
+  font-weight: 100;
+  letter-spacing: -0.02rem;
+  text-align: start;
+  color: #333;
+  margin: 0 auto;
+}
 #main-footer .footer-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   height: 85%;
   width: 80%;
   margin: auto;
 }
 #main-footer .footer-container .footer-logo {
-  height: 55%;
-  margin: 0 3%;
+  height: 90%;
+  width: 90%;
   object-fit: contain;
+  margin: auto;
 }
 #main-footer .footer-container .footer-navigation {
-  width: 30%;
+  height: 90%;
+  width: 100%;
   text-transform: uppercase;
+  align-content: center;
 }
 #main-footer .footer-navigation .footer-list {
-  margin-top: 9%;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -30,29 +43,29 @@ footer {
 #main-footer .link {
   text-decoration: none;
   color: black;
-  font-size: 1.2em;
+  font-size: 1.5em;
   transition: all 0.3s;
 }
-#main-footer .link:hover{
-  font-weight: bold;
+#main-footer .link:hover {
+  font-weight: bolder;
 }
-#main-footer .contact-container {
-  height: 100%;
+#main-footer .footer-container .contact-container {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 #main-footer .footer-phone,
 #main-footer .footer-mail,
 #main-footer .footer-location {
-  margin: 1%;
-  height: 25%;
   display: flex;
   align-items: center;
 }
 #main-footer .contact-container .footer-phone img,
 #main-footer .contact-container .footer-mail img,
 #main-footer .contact-container .footer-location img {
-  width: 10%;
+  width: 4rem;
+  height: 4rem;
   object-fit: contain;
 }
 
@@ -60,29 +73,72 @@ footer {
 #main-footer .footer-mail p,
 #main-footer .footer-location p {
   text-align: left;
-  width: 40%;
   margin-left: 2%;
   font-size: 1em;
+  padding: 0 5%;
 }
 #main-footer .redes {
   padding: 1%;
-  width: 40%;
-  display: flex;
   gap: 1rem;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #main-footer .redes a {
   color: black;
   font-size: 4rem;
+  height: fit-content;
   transition: all 0.3s;
 }
 #main-footer .redes a:hover {
   font-size: 5rem;
 }
-#main-footer .footer-rights {
-  margin-left: 15%;
-  font-weight: 100;
-  letter-spacing: -0.02rem;
-  text-align: start;
-  color: #333;
+
+@media ((min-width: 768px ) and ( max-width: 1024px)) {
+  #footer {
+    width: 100vw;
+    height: auto;
+    font-size: 18px;
+  }
+  #main-footer .footer-rights {
+    width: 90%;
+    font-weight: 100;
+    letter-spacing: -0.02rem;
+    text-align: start;
+    color: #333;
+    margin: 0 auto;
+  }
+  #main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 85%;
+    width: 90%;
+    margin: auto;
+  }
+}
+@media ((max-width: 768px )) {
+  #main-footer {
+    font-size: 18px;
+    width: 100vw;
+    height: auto;
+  }
+  #main-footer .footer-rights {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #main-footer .footer-container {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1,1fr);
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+  }
+  #main-footer .footer-container .footer-logo {
+    height: auto;
+    width: 50%;
+    object-fit: contain;
+    margin: 5% auto;
+  }
 }
