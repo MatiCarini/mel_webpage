@@ -11,7 +11,7 @@
 }
 #nosotros .container .content {
   box-shadow: 0 0 15px #000;
-  height: 60vh;
+  padding: 5% 0;
   background: linear-gradient(transparent, #200c 40%),
     url("../images/12.jpg") top/cover no-repeat;
   padding-left: 7%;
@@ -47,7 +47,8 @@
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #nosotros {
     align-content: center;
-    height: 90vh;
+    width: 100vw;
+    height: auto;
     font-size: 18px;
   }
   #nosotros .container {
@@ -55,17 +56,16 @@
     box-sizing: border-box;
     background-color: transparent;
     align-content: center;
+    width: 100%;
+    height: auto;
   }
   #nosotros .container .content {
-    box-shadow: 0 0 15px #000;
-    height: 60vh;
     background: linear-gradient(transparent, #200c 40%),
       url("../images/12.jpg") top/cover no-repeat;
-    padding-left: 7%;
     text-align: left;
     color: white;
     align-content: center;
-    font-size: 1.2em;
+    height: auto;
   }
   #nosotros .container h2 {
     font-family: "Courier New", Courier, monospace;
@@ -96,10 +96,12 @@
 @media (max-width: 768px) {
   #nosotros {
     align-content: center;
-    height: 90vh;
+    width: 100vw;
+    height: auto;
     font-size: 16px;
   }
   #nosotros .container {
+    height: 100%;
     position: relative;
     box-sizing: border-box;
     background-color: transparent;
@@ -107,14 +109,15 @@
   }
   #nosotros .container .content {
     box-shadow: 0 0 15px #000;
-    height: 60vh;
     background: linear-gradient(transparent, #200c 40%),
       url("../images/12.jpg") top/cover no-repeat;
-    padding-left: 7%;
+      padding: 15% 7%;
     text-align: left;
     color: white;
     align-content: center;
     font-size: 1.1em;
+    width: 100%;
+    height: auto;
   }
   #nosotros .container h2 {
     font-family: "Courier New", Courier, monospace;
@@ -138,7 +141,7 @@
   }
   .continue-button a {
     color: #fff9;
-    font-size: 2em;
+    font-size: 3em;
   }
  
 }
