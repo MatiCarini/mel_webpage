@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
 }
-#servicios .services-title {
+#servicios .container .services-title {
   background: #030303;
   color: white;
   box-shadow: 0 2px 16px #000b;
@@ -31,7 +31,7 @@
 
 /* lista de servicios */
 
-#servicios .card-container {
+#servicios .container .card-container {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -40,7 +40,7 @@
   margin: 0 auto;
 }
 
-#servicios .card {
+#servicios .container .card-container .card {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -48,14 +48,14 @@
   border-left: 2px solid #aaa6;
 }
 
-#servicios .card-image {
+#servicios .container .card-container .card .card-image {
   width: 35%;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
 }
 
-#servicios .card-content {
+#servicios .container .card-container .card .card-content {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -63,15 +63,15 @@
   margin-top: 2.5%;
   font-size: 16px;
 }
-#servicios .card-container .card-info strong {
+#servicios .container .card-container .card .card-info strong {
   font-weight: 100;
   color: #444;
 }
-#servicios .card-container .card-title,
-#servicios .card-container .card-info {
+#servicios .container .card-container .card .card-title,
+#servicios .container .card-container .card .card-info {
   padding: 1%;
 }
-#servicios .card-container .card-title {
+#servicios .container .card-container .card .card-title {
   letter-spacing: -0.05rem;
   margin-top: 1rem;
   font-size: 1.5em;
@@ -79,11 +79,11 @@
   box-sizing: border-box;
   color: #345;
 }
-#servicios .card-info {
+#servicios .container .card-container .card .card-info {
   margin-top: 1.3rem;
   font-size: 1.1em;
 }
-#servicios .no-border {
+#servicios .container .card-container .card .no-border {
   border: none;
 }
 
@@ -97,73 +97,63 @@
     display: flex;
     flex-direction: column;
   }
-  #servicios .services-title {
+  #servicios .container .services-title {
     background: #030303;
     color: white;
     box-shadow: 0 2px 16px #000b;
-    font-size: 2em;
+    font-size: 2.5em;
     width: 100%;
     margin: 0;
     display: flex; /* Activa flexbox */
     align-items: center; /* Centra verticalmente */
     justify-content: center; /* Opcional: centra horizontalmente */
     text-align: center;
-    padding: 3% 0;
+    padding: 5%;
   }
   #servicios .container .title {
     font-size: 3em;
     font-weight: 100;
-    padding: 4% 0;
+    padding: 7% 0;
     text-transform: uppercase;
     color: #999;
   }
-  
-  #servicios .card-container {
+
+  #servicios .container .card-container {
     box-sizing: border-box;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    max-width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    max-width: 80%;
   }
 
-  #servicios .card {
+  #servicios .container .card-container .card {
     border: none;
     box-sizing: border-box;
-    width: 100%;
     display: flex;
+    width: 100%;
     flex-direction: column;
-    padding: 3em 0;
   }
 
-  #servicios .card .card-image {
-    height: 50%;
+  #servicios .container .card-container .card .card-image {
+    width: 40%;
+    margin: 5% auto;
     object-fit: contain; /* Ajusta la imagen sin distorsión */
   }
-
-  #servicios .card-content {
-    width: 70%;
-    margin-top: 2.5%;
-    font-size: 20px;
-  }
-  #servicios .card-container .card-info strong {
+  #servicios .container .card-container .card .card-info strong {
     font-weight: 100;
     color: #444;
   }
-  #servicios .card-container .card-title,
-  #servicios .card-container .card-info {
-    padding: 1%;
-  }
-  #servicios .card-container .card-title {
-    letter-spacing: -0.05rem;
-    margin-top: 1rem;
+  
+  #servicios .container .card-container .card .card-title {
     font-size: 1.5em;
     font-weight: 600;
     box-sizing: border-box;
     color: #345;
   }
-  #servicios .card-info {
-    margin-top: 1.3rem;
-    font-size: 1.1em;
+  #servicios .container .card-container .card .card-info {
+    padding-bottom: 3em;
+    font-size: 1.2em;
   }
 }
 
@@ -177,18 +167,18 @@
     display: flex;
     flex-direction: column;
   }
-  #servicios .services-title {
+  #servicios .container .services-title {
     background: #030303;
     color: white;
     box-shadow: 0 2px 16px #000b;
-    font-size: 1.5em;
+    font-size: 1.9em;
     width: 100%;
     margin: 0;
     display: flex; /* Activa flexbox */
     align-items: center; /* Centra verticalmente */
     justify-content: center; /* Opcional: centra horizontalmente */
     text-align: center;
-    padding: 7% 0;
+    padding: 10% 0;
   }
   #servicios .container .title {
     font-size: 2.5em;
@@ -197,8 +187,8 @@
     text-transform: uppercase;
     color: #999;
   }
-  
-  #servicios .card-container {
+
+  #servicios .container .card-container {
     box-sizing: border-box;
     list-style: none;
     display: flex;
@@ -206,7 +196,7 @@
     max-width: 80%;
   }
 
-  #servicios .card {
+  #servicios .container .card-container .card {
     border: none;
     box-sizing: border-box;
     width: 100%;
@@ -215,34 +205,34 @@
     padding: 3em 0;
   }
 
-  #servicios .card .card-image {
-    height: 50%;
+  #servicios .container .card-container .card .card-image {
+    width: 30%;
     object-fit: contain; /* Ajusta la imagen sin distorsión */
   }
 
-  #servicios .card-content {
+  #servicios .container .card-container .card .card-content {
     width: 70%;
     margin-top: 1.5%;
-    font-size: 20px;
+    font-size: 18px;
   }
-  #servicios .card-container .card-info strong {
-    font-weight: 500;
+  #servicios .container .card-container .card .card-info strong {
     color: #444;
   }
-  #servicios .card-container .card-title,
-  #servicios .card-container .card-info {
+  #servicios .container .card-container .card .card-title,
+  #servicios .container .card-container .card .card-info {
     padding: 1%;
   }
-  #servicios .card-container .card-title {
+  #servicios .container .card-container .card .card-title {
     letter-spacing: -0.05rem;
     margin-top: 1rem;
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 1.4em;
+    font-weight: 100;
     box-sizing: border-box;
     color: #345;
   }
-  #servicios .card-info {
+  #servicios .container .card-container .card .card-info {
     margin-top: 1.3rem;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    font-weight: bolder;
   }
 }
