@@ -26,6 +26,8 @@
   width: 60%;
   margin: 2% 1%;
   font-size: 1.1em;
+  color: #ddd;
+
 }
 .continue-button {
   width: 100%;
@@ -38,6 +40,7 @@
   transition: 0.3s;
 }
 .continue-button a {
+  width: 100%;
   color: #fff9;
   font-size: 3em;
 }
@@ -46,75 +49,33 @@
 }
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #nosotros {
-    align-content: center;
     width: 100vw;
     height: auto;
     font-size: 18px;
   }
   #nosotros .container {
-    position: relative;
-    box-sizing: border-box;
-    background-color: transparent;
-    align-content: center;
     width: 100%;
     height: auto;
   }
   #nosotros .container .content {
-    background: linear-gradient(transparent, #200c 40%),
-      url("../images/12.jpg") top/cover no-repeat;
-    text-align: left;
-    color: white;
-    align-content: center;
     height: auto;
   }
   #nosotros .container h2 {
     font-family: "Courier New", Courier, monospace;
   }
-  #nosotros .container h4 {
-    font-weight: 100;
-    width: 60%;
-    margin: 2% 1%;
-    font-size: 1em;
-  }
-  .continue-button {
-    width: 100%;
-    padding: 0.5%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: transparent;
-    border: none;
-    transition: 0.5s;
-  }
-  .continue-button a {
-    color: #fff9;
-    font-size: 3em;
-  }
- 
 }
 
 @media (max-width: 768px) {
   #nosotros {
-    align-content: center;
     width: 100vw;
     height: auto;
     font-size: 16px;
   }
   #nosotros .container {
     height: 100%;
-    position: relative;
-    box-sizing: border-box;
-    background-color: transparent;
-    align-content: center;
   }
   #nosotros .container .content {
-    box-shadow: 0 0 15px #000;
-    background: linear-gradient(transparent, #200c 40%),
-      url("../images/12.jpg") top/cover no-repeat;
-      padding: 15% 7%;
-    text-align: left;
-    color: white;
-    align-content: center;
+    padding: 15% 7%;
     font-size: 1.1em;
     width: 100%;
     height: auto;
@@ -127,21 +88,6 @@
     width: 90%;
     margin: 4% 2%;
     font-size: 1.2em;
-    color: #ddd;
   }
-  .continue-button {
-    width: 100%;
-    padding: 0.5%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: transparent;
-    border: none;
-    transition: 0.5s;
-  }
-  .continue-button a {
-    color: #fff9;
-    font-size: 3em;
-  }
- 
+
 }
