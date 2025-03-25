@@ -1,7 +1,6 @@
 /*hero*/
 #hero {
   height: 100vh;
-  font-size: 24px;
 }
 
 #hero .hero-bg {
@@ -25,7 +24,7 @@
 #hero .hero-bg .hero-content .hero-logo {
   width: 45%;
   height: auto;
-  margin-top: 10rem;
+  margin-top: 9rem;
   object-fit: contain;
 }
 
@@ -59,7 +58,7 @@
 }
 
 #hero .hero-bg .hero-content .btn-action:hover i {
-  font-size: 2.5em;
+  font-size: 3rem;
 }
 
 #hero .hero-bg .hero-content .btn-action .texto {
@@ -71,20 +70,20 @@
   align-items: center;
 }
 #hero .hero-bg .hero-content .btn-action .texto .title {
-  padding: 0.5em;
+  padding: 0.5rem;
   font-weight: 600;
   font-family: monospace;
-  font-size: 1.3em;
+  font-size: 1.8rem;
 }
 #hero .hero-bg .hero-content .btn-action .texto .subtitle {
-  padding: 0.5em;
+  padding: 0.5rem;
   font-weight: 100;
   font-family: monospace;
   color: #777;
-  font-size: 0.9em;
+  font-size: 1.4rem;
 }
 #hero .hero-bg .hero-content .btn-action i {
-  font-size: 2em;
+  font-size: 2rem;
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -104,7 +103,6 @@
 }
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #hero {
-    font-size: 18px;
     width: 100vw;
   }
   #hero .hero-bg .background {
@@ -118,12 +116,15 @@
   }
   #hero .hero-bg .hero-content .btn-action .texto {
     margin: auto;
-    max-width: 80%;
+    max-width: 90%;
   }
   #hero .hero-bg .hero-content .btn-action .texto .title {
     padding: 1em;
+    font-size: 1.6rem;
   }
-
+  #hero .hero-bg .hero-content .btn-action .texto .subtitle {
+    font-size: 1.2rem;
+  }
   #hero .hero-bg .hero-content .btn-action i {
     padding-bottom: 0.5em;
   }
@@ -131,24 +132,29 @@
 /*hero*/
 @media (max-width: 768px) {
   #hero {
-    font-size: 18px;
     width: 100vw;
   }
   #hero .hero-bg .hero-content .hero-logo {
+    margin-top: 50%;
     width: 95%;
   }
   #hero .hero-bg .background {
     background: url("../images/hero2.jpg") fixed center / cover no-repeat;
   }
-  #hero .hero-bg .hero-content .btn-action {
-    height: 20%;
-  }
+ 
   #hero .hero-bg .hero-content .btn-action i {
     padding-bottom: 1.5em;
   }
   #hero .hero-bg .hero-content .btn-action .texto {
-    font-size: 14px;
     max-width: 90%;
   }
+  #hero .hero-bg .hero-content .btn-action .texto .title {
+    padding: 1em;
+    font-size: 1.2rem;
+  }
+  #hero .hero-bg .hero-content .btn-action .texto .subtitle {
+    font-size: 1.2rem;
+  }
+  
 }
 /* #202f88;*/

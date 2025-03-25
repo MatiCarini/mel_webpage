@@ -1,83 +1,60 @@
-#servicios {
+#servicios{
   height: auto;
 }
-#servicios .container {
-  height: 100%;
+#servicios div {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  margin: auto;
 }
-#servicios .container .services-title {
-  background: #030303;
-  color: white;
-  box-shadow: 0 2px 16px #000b;
-  font-size: 1.9em;
-  width: 100%;
-  padding: 2%;
-  margin: 0;
-  display: flex; /* Activa flexbox */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Opcional: centra horizontalmente */
+
+#servicios div h2 {
   text-align: center;
+  padding: 2rem;
+  font-size: 2.3rem;
+  background-color: black;
+  color: white;
 }
-#servicios .container .title {
-  margin: 4%;
-  font-size: 2.5em;
-  font-weight: 100;
+#servicios div h3 {
+  text-align: center;
   text-transform: uppercase;
+  padding: 3rem;
+  font-size: 2rem;
   color: #999;
-}
-
-/* lista de servicios */
-
-#servicios .container .card-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  max-width: 70%;
-  margin: 0 auto;
-}
-
-#servicios .container .card-container .card {
-  box-sizing: border-box;
-  display: flex;
-  width: 25%;
-  flex-direction: column;
-}
-
-#servicios .container .card-container .card .card-image {
-  width: 35%;
-  height: auto;
-  object-fit: contain;
-  margin: 1em auto;
-}
-
-#servicios .container .card-container .card .card-content {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  font-size: 16px;
-}
-#servicios .container .card-container .card .card-info strong {
   font-weight: 100;
+}
+#servicios div ul {
+  list-style: none;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
   color: #345;
 }
-
-#servicios .container .card-container .card .card-title {
-  letter-spacing: -0.05rem;
-  margin-top: 0.8rem;
-  font-size: 1.5em;
-  font-weight: 600;
-  box-sizing: border-box;
-  color: #345;
+#servicios div ul li {
+  width: 23%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px #0005;
 }
-#servicios .container .card-container .card .card-info {
-  margin-top: 1.3rem;
-  font-size: 1.1em;
+#servicios div ul li figure {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
+#servicios div ul li figure img {
+  width: 35%;
+  margin: 1.5rem auto;
+}
+#servicios div ul li figure figcaption h4 {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0 3rem;
+  padding-bottom: 1rem
+}
+#servicios div ul li figure figcaption p {
+  padding: 2rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  hyphens: auto;
+}
 
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #servicios {
@@ -85,38 +62,43 @@
     height: auto;
   }
 
-  #servicios .container .services-title {
-    font-size: 2.5em;
+  #servicios div h2 {
     width: 100%;
-    padding: 5%;
+    padding: 2.5%;
   }
-  #servicios .container .title {
-    font-size: 3em;
-    padding: 7% 0;
+  #servicios div h3 {
+    margin: 1rem 0;
   }
 
-  #servicios .container .card-container {
+  #servicios div ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-    max-width: 80%;
+    max-width: 75%;
+    gap: 1.5rem 2rem;
+    padding: 1rem;
+    margin-bottom: 4em;
   }
-
-  #servicios .container .card-container .card {
-    border: none;
+  #servicios div ul li {
+    width: 100%;
+  }
+  #servicios div ul li figure {
     display: flex;
     width: 100%;
   }
 
-  #servicios .container .card-container .card .card-image {
-    width: 25%;
-    margin: 5% auto;
+  #servicios div ul li figure img {
+    margin:2rem auto;
+    width: 35%;
   }
-  #servicios .container .card-container .card .card-info {
-    margin-top: 0.5rem;
-    padding-bottom: 3em;
-    font-size: 1.2em;
-  }
+#servicios div ul li figure figcaption h4 {
+  padding: 0 2rem;
+  padding-bottom: 0.7rem
+}
+#servicios div ul li figure figcaption p {
+  padding: 0 3rem;
+  padding-bottom: 2rem
+
+}
 }
 
 @media (max-width: 768px) {
@@ -124,37 +106,42 @@
     width: 100vw;
     height: auto;
   }
-  #servicios .container {
+  #servicios div {
     width: 100%;
+    padding-bottom: 4rem;
+  }
+  #servicios div h2 {
+    padding: 2rem;
+    font-size: 1.8rem;
+  }
+  #servicios div h3 {
+    padding: 3rem 0;
+  }
+
+  #servicios div ul {
     display: flex;
     flex-direction: column;
-  }
-  #servicios .container .services-title {
-    padding: 10% 0;
-  }
-  #servicios .container .title {
-    padding: 7% 0;
-  }
-
-  #servicios .container .card-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-  }
-
-  #servicios .container .card-container .card {
-    border: none;
-    width: 100%;
-    padding: 3em 0;
-  }
-
-  #servicios .container .card-container .card .card-image {
-    width: 30%;
-  }
-
-  #servicios .container .card-container .card .card-content {
     width: 70%;
-    margin-top: 1.5%;
-    font-size: 18px;
+    gap : 3rem;
   }
+  #servicios div ul li {
+    width: 100%;
+  }
+  #servicios div ul li figure {
+    margin: 1rem 0;
+  }
+
+  #servicios div ul li figure img {
+    margin: 1rem auto;
+    width: 40%;
+    padding: 0;
+  }
+
+  #servicios div ul li figure figcaption {
+    margin: 0;
+  }
+  #servicios div ul li figure figcaption h4 {
+    padding-bottom: 1rem;
+  }
+  
 }
