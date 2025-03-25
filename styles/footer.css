@@ -16,21 +16,21 @@ footer {
   margin: 0 auto;
 }
 #main-footer .footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   height: 85%;
   width: 80%;
   margin: auto;
 }
 #main-footer .footer-container .footer-logo {
-  height: 90%;
-  width: 90%;
+  height: 70%;
   object-fit: contain;
   margin: auto;
 }
 #main-footer .footer-container .footer-navigation {
-  height: 90%;
-  width: 100%;
+  margin: auto;
+  height: 70%;
+  padding: 1rem 3rem;
+  width: auto;
   text-transform: uppercase;
   align-content: center;
 }
@@ -40,7 +40,7 @@ footer {
   flex-direction: column;
   gap: 10px;
 }
-#main-footer .link {
+#main-footer .footer-navigation .footer-list .link {
   text-decoration: none;
   color: black;
   font-size: 1.5em;
@@ -50,7 +50,9 @@ footer {
   font-weight: bolder;
 }
 #main-footer .footer-container .contact-container {
-  flex-grow: 1;
+  padding: 1em;
+  margin: auto;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -73,12 +75,10 @@ footer {
 #main-footer .footer-mail p,
 #main-footer .footer-location p {
   text-align: left;
-  margin-left: 2%;
-  font-size: 1em;
-  padding: 0 5%;
+  font-size: 1.2em;
+  padding: 0 1em;
 }
 #main-footer .redes {
-  padding: 1%;
   gap: 1rem;
   display: flex;
   align-items: center;
@@ -98,7 +98,6 @@ footer {
   #footer {
     width: 100vw;
     height: auto;
-    font-size: 18px;
   }
   #main-footer .footer-rights {
     width: 90%;
@@ -107,10 +106,37 @@ footer {
   #main-footer .footer-container {
     width: 90%;
   }
+  #main-footer .footer-container .footer-logo {
+    height: 50%;
+  }
+  #main-footer .footer-container .footer-navigation {
+    padding: 1rem;
+  }
+  #main-footer .footer-navigation .footer-list .link {
+    font-size: 1.2em;
+  }
+  #main-footer .footer-phone p,
+  #main-footer .footer-mail p,
+  #main-footer .footer-location p {
+    font-size: 1.1em;
+  }
+  #main-footer .contact-container {
+    padding: 0;
+  }
+  #main-footer .contact-container .footer-phone img,
+  #main-footer .contact-container .footer-mail img,
+  #main-footer .contact-container .footer-location img {
+    width: 3em;
+    height: 3em;
+  }
+  #main-footer .redes {
+    display: block;
+    margin: auto;
+  }
 }
 @media ((max-width: 768px )) {
   #main-footer {
-    font-size: 18px;
+    font-size: 16px;
     width: 100vw;
     height: auto;
   }
@@ -119,18 +145,32 @@ footer {
     margin: 0 auto;
   }
   #main-footer .footer-container {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    justify-content: center;
     width: 80%;
     height: auto;
     margin: auto;
     text-align: center;
   }
+  #main-footer .contact-container {
+    width: 60%;
+    padding: 1em;
+    display: flex;
+    gap:1em;
+  }
+  #main-footer .contact-container .footer-phone img,
+  #main-footer .contact-container .footer-mail img,
+  #main-footer .contact-container .footer-location img {
+    width: 2.5em;
+    height: 2.5em;
+  }
   #main-footer .footer-container .footer-logo {
     height: auto;
-    width: 50%;
+    width: 30%;
     object-fit: contain;
-    margin: 5% auto;
+    margin:2.5% auto;
+  }
+  #main-footer .footer-container .redes{
+    padding: 2em;
   }
 }

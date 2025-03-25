@@ -64,7 +64,7 @@
 
 #hero .hero-bg .hero-content .btn-action .texto {
   margin: auto;
-  max-width: 70%;
+  max-width: 60%;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -74,14 +74,14 @@
   padding: 0.5em;
   font-weight: 600;
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 #hero .hero-bg .hero-content .btn-action .texto .subtitle {
   padding: 0.5em;
   font-weight: 100;
   font-family: monospace;
   color: #777;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 #hero .hero-bg .hero-content .btn-action i {
   font-size: 2em;
