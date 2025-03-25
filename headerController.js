@@ -18,9 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const hamburguerMenu = document.getElementById("hamburger-menu");
-const navItems = document.getElementById("header-nav");
 
-hamburguerMenu.addEventListener("click", () => {
-  navItems.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const nav = document.getElementById("header-nav");
+  const navLinks = document.querySelectorAll("#header-nav a");
+
+  // Función para alternar la visibilidad del menú
+  function toggleMenu() {
+    nav.classList.toggle("active");
+  }
+
+  // Evento para abrir/cerrar el menú cuando se hace clic en el botón
+  hamburgerMenu.addEventListener("click", toggleMenu);
+
+  // Evento para cerrar el menú cuando se hace clic en un link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
 });

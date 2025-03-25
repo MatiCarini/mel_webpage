@@ -71,6 +71,9 @@
   align-content: center;
   font-size: 1.2em;
 }
+#main-header .header-content .header-nav ul li a:visited{
+  
+}
 #main-header .header-content .header-content img:hover {
   scale: 1.1;
 }
