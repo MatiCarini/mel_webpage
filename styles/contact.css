@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
 }
-#contacto .container-box iframe {
+#contacto div iframe {
   width: 80%;
   height: 100%;
   margin: auto;
@@ -129,83 +129,46 @@
   color: #def;
   scale: 1.1;
 }
-#contact-form label {
-}
-#contact-form textarea {
-}
 
-#contacto form button {
-  grid-row: 3;
-}
-@media ((min-width: 768px ) and ( max-width: 1024px)) {
+@media ((min-width: 0 ) and ( max-width: 1024px)) {
   #contacto {
+    height: fit-content;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
   }
-  #contacto .container {
+  #contacto div {
+    box-sizing: border-box;
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
   }
 
-  #contacto .container-box {
-  }
-  #contacto .container-box iframe {
+  #contacto div iframe {
+    padding: 0;
+    width: 90%;
+    box-sizing: border-box;
+    height: 40vh;
+    margin: 2rem auto;
   }
   /* Titulo */
 
-  #contacto .container-box h2 {
+  #contacto ul {
+    flex-direction: column;
+    width: 100%;
   }
-  #contacto .container-box .subtitle {
+  #contacto ul li figure {
+    width: 90%;
+    margin: 0 auto;
   }
-  /* Iconos */
-  #contacto .contact-icons {
-  }
-  #contacto .contact-card {
-  }
-
-  #contacto .contact-card-content {
-  }
-
-  #contacto .contact-icons .contact-card .contact-icon {
-  }
-  #contact-form {
+  #contacto ul li figure img {
+    width: 15%;
   }
 
-  #contact-form label .contact-input {
-  }
-
-  #contact-form textarea {
-  }
-}
-@media (max-width: 768px) {
-  #contacto {
-  }
-  #contacto .container {
-  }
-
-  #contacto .container-box {
-  }
-  #contacto .container-box iframe {
-  }
-  /* Titulo */
-
-  #contacto .container-box .subtitle {
-  }
-  /* Iconos */
-  #contacto .contact-icons {
-  }
-  #contacto .contact-card {
-  }
-
-  #contacto .contact-card-content {
-  }
-  #contacto .contact-icons .contact-card .contact-icon {
-  }
-  #contact-form {
-  }
-
-  #contact-form label .contact-input {
-  }
-
-  #contact-form textarea {
-  }
-
-  #contact-form button {
+  #contacto div form {
+    height: 45vh;
   }
 }
