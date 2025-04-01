@@ -46,7 +46,7 @@
 
 #main-header .header-content .header-nav {
   height: 70%;
-  width: 50%;
+  width: 55%;
   align-content: center;
 }
 #main-header .header-content .header-nav ul {
@@ -76,10 +76,10 @@
 }
 #main-header.scrolled {
   position: fixed;
+  height: 12vh;
   top: 0;
   left: 0;
   background: #123;
-  height: 0.8;
   z-index: 1000;
 }
 @media ((min-width: 768px ) and ( max-width: 1024px)) {

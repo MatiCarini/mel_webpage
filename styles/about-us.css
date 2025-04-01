@@ -10,7 +10,7 @@
   box-sizing: border-box;
   background-color: transparent;
   align-content: center;
-  padding: 10vh 0;
+  padding: 14vh 0;
   box-shadow: 0 0 15px #000;
 }
 #nosotros .container .content {
@@ -62,6 +62,4 @@
     height: auto;
     font-size: 16px;
   }
- 
-  
 }

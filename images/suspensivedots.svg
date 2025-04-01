@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+  <!-- Primer círculo -->
+  <circle cx="406" cy="406" r="50" stroke="#202f99" stroke-width="15" fill="none" />
+
+  <!-- Segundo círculo -->
+  <circle cx="106" cy="406" r="50" stroke="#202f99" stroke-width="15" fill="none" />
+
+  <!-- Tercer círculo -->
+  <circle cx="256px" cy="406" r="50" stroke="#202f99" stroke-width="15" fill="none" />
+</svg>

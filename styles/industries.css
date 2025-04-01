@@ -1,123 +1,148 @@
+/* Estilos base para todos los dispositivos */
 #industrias {
-  height: 80vh;
-  align-content: center;
-}
-#industrias .container {
+  width: 100%;
   height: 100%;
+  display: flex;
+}
+
+#industrias .container {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 #industrias .industrias-title {
   text-transform: uppercase;
-  padding: 5% 0;
-  font-size: 2em;
+  padding: 5%;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
 }
 
 #industrias .container .list-content {
-  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 5%;
   list-style: none;
+  padding: 0;
+  width: 80%;
   display: flex;
-  flex-direction: row;
-  min-height: 0;
-  width: 60%;
-  margin: 4% auto;
+  gap: 2%;
+  align-items: start;
 }
+
 #industrias .list-content li {
-  height: 60%;
+  display: contents;
+}
+
+#industrias .list-content li figure {
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  padding: 5%;
 }
+
 #industrias .list-content li img {
-  width: 50%;
+  width: 60%;
   height: auto;
-  margin-bottom: 6%;
-  object-position: center;
+  max-height: 120px;
   object-fit: contain;
+  object-position: center;
+  margin-bottom: 10%;
 }
-#industrias .list-content li h2 {
-  font-size: 1.5rem;
+
+#industrias .list-content li figcaption {
+  text-align: center;
+  width: 100%;
+}
+
+#industrias .list-content li figcaption h2 {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
   text-transform: uppercase;
   color: #202f99;
-  margin-top: 4%;
-  padding: 0 3%;
-  font-weight: 400;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
 }
 
-@media ((min-width: 768px ) and ( max-width: 1024px)) {
-  #industrias {
-    width: 100vw;
-    height: auto;
-    align-content: center;
-    font-size: 20px;
-    padding: 5% 0;
-    padding-bottom: 0;
-  }
-  #industrias .container .industrias-title {
-    text-transform: uppercase;
-    padding: 7%;
-    padding-bottom: 0;
-    font-size: 1.3em;
+/* Estilos para tablet (768px-1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #industrias .industrias-title {
+    padding: 10%;
   }
 
+  #industrias .container {
+    box-sizing: content-box;
+    padding: 10%;
+  }
   #industrias .container .list-content {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap : 5%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
     width: 60%;
-    margin: 10% auto;
+    padding: 10%;
+    box-sizing: content-box;
+    height: fit-content;
   }
-  #industrias .list-content li {
-    height: 100%;
-    font-size: 14px;
-    margin-top: 10%;
+
+  #industrias .list-content li:nth-child(5) figure {
+    grid-column: 1 / span 2;
+    width: 50%;
+    margin: 0 auto;
   }
+
   #industrias .list-content li img {
-    height: 70%;
-    object-position: center;
-    object-fit: contain;
+    margin-bottom: 8%;
   }
-  #industrias .list-content li h2 {
-    font-size: 1.7em;
-    font-weight: 600;
+
+  #industrias .list-content li figcaption h2 {
+    font-size: 1.2rem;
   }
 }
 
-
-@media (max-width: 768px) {
+/* Estilos para móviles (hasta 767px) */
+@media (max-width: 767px) {
   #industrias {
-    width: 100vw;
-    font-size: 16px;
     padding: 10% 0;
     height: auto;
   }
-  #industrias .container {
-    margin: 5% 0;
-  }
   #industrias .container .industrias-title {
-    font-size: 1.4em;
-    padding: 0 7%;
-    margin: 5% 0;
+    font-size: 1.8rem;
   }
-
   #industrias .container .list-content {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap : 10%;
-    width: 80%;
-    margin: 20% auto;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    width: 60%;
   }
   #industrias .list-content li {
-    height: 100%;
+    margin: 10%;
   }
+
   #industrias .list-content li img {
-    height: 70%;
+    height: 100%;
+    margin-bottom: 5%;
   }
-  #industrias .list-content li h2 {
-    font-size: 1.2em;
-    font-weight: 600;
+
+  #industrias .list-content li figcaption h2 {
+    font-size: 1.4rem;
   }
- 
+}
+
+/* Estilos para pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+  #industrias .container .list-content {
+    max-width: 1200px;
+    gap: 1.5%;
+  }
+
+  #industrias .list-content li figure {
+    padding: 3%;
+  }
+
+  #industrias .list-content li img {
+    max-height: 150px;
+  }
 }
