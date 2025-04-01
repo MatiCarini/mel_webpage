@@ -1,3 +1,6 @@
+#galeria {
+  margin-bottom: 5vh;
+}
 #galeria .cards-container {
   width: 100%;
 }
@@ -9,29 +12,54 @@
   font-family: monospace;
 }
 #galeria .cards-container ul {
-  box-sizing: border-box;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  height: 60vh;
+  width: 90%;
+  height: 70vh;
 }
 #galeria .cards-container ul li {
-  align-content: center;
-  padding: 0.5rem;
-  background-color: #bbb;
-  border-radius: 1rem;
+  display: contents;
   list-style: none;
-  width: 33%;
 }
-#galeria .cards-container ul li img {
-  box-shadow: 0 0 15px 0 #0008;
+#galeria .cards-container ul li figure {
+  position: relative;
+  width: 100%;
+  align-content: center;
+}
+#galeria .cards-container ul li figure img {
+  box-shadow: 0 0 5px 0 #000;
   border-radius: 0.5rem;
   object-fit: cover;
   object-position: center;
   height: 95%;
   width: 95%;
   margin: auto;
+}
+
+#galeria .cards-container ul li figure figcaption {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#000a, #012c);
+  border-radius: 0.5rem;
+  height: 95%;
+  width: 95%;
+  margin: auto;
+  color: white;
+  font-size: 1.8rem;
+  transition: all 0.3 ease;
+}
+#galeria .cards-container ul li figure:hover figcaption {
+  display: flex;
+}
+#galeria .cards-container ul li figure figcaption p {
+  padding: 1rem 2rem;
+  height: fit-content;
+  align-self: center;
+  margin: 0 auto;
 }
 
 #galeria .cards-container .galeria-button {

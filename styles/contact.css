@@ -1,39 +1,31 @@
-
-#contacto .container {
-  height: 90%;
-  width: 80%;
-  margin: 0 auto;
+#contacto {
+  height: 90vh;
   display: flex;
   flex-direction: row-reverse;
-  text-align: start;
+  padding: 2.5%;
 }
 
-#contacto .container-box {
+#contacto div {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  height: 85%;
-  width: 50%;
-  align-content: center;
 }
 #contacto .container-box iframe {
+  width: 80%;
+  height: 100%;
   margin: auto;
-  box-sizing: border-box;
-  box-shadow: 0 0 15px #0008;
-  height: 90%;
-  width: 90%;
-  margin-left:0 ;
+  padding: 0;
+  box-shadow: 0 0 15px #0009;
 }
 /* Titulo */
 
-#contacto .container-box h2 {
-  width: 95%;
-  margin: auto;
+#contacto div h2 {
+  text-align: start;
   text-transform: uppercase;
-  font-size: 2em;
-  padding: 2.5% 0;
-  padding-top: 5%;
+  font-size: 2rem;
 }
-#contacto .container-box .subtitle {
+#contacto div .subtitle {
+  padding: 1rem;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 1rem;
@@ -42,240 +34,178 @@
   font-size: 1.1em;
 }
 /* Iconos */
-#contacto .contact-icons {
-  height: 6rem;
+#contacto ul {
+  display: flex;
+  flex: grid;
   width: 100%;
-  margin: 1% auto;
-  display: flex;
-  flex-direction: row;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
-#contacto .contact-card {
+#contacto ul li {
+  list-style: none;
+  display: contents;
+}
+
+#contacto ul li figure {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem 0;
   width: 33%;
+  height: auto;
+}
+#contacto ul li figure img {
+  padding: 0;
+  width: 25%;
+  object-fit: contain;
+  align-self: center;
+}
+#contacto ul li figure figcaption {
+  width: 100%;
+  align-content: center;
+}
+#contacto ul li figure figcaption p {
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  text-align: start;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+#contacto ul li figure figcaption p a {
+  padding: 0;
 }
 
-#contacto .contact-card-content {
-  overflow-wrap: anywhere;
-  text-align: left;
-  padding: 0.5rem;
-  width: 90%;
-  height: 95%;
-}
-#contacto .contact-card-content p {
-  margin-top: 0.2rem;
-  padding: 0.1rem 0.2rem;
-}
-#contacto .contact-card-content p a {
-  color: #888;
-}
-
-#contacto .contact-call {
-  background: url("../images/whatsapp.png");
-}
-#contacto .contact-mail {
-  background: url("../images/mail.svg");
-}
-#contacto .contact-location {
-  background: url("../images/location.svg");
-}
-#contacto .contact-icons .contact-card .contact-icon {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 20%;
-  height: 100%;
-}
 /*  Formulario */
 
-#contact-form {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
+#contacto form {
   flex-grow: 1;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2);
+  grid-template-rows: auto 1fr auto;
+  grid-auto-rows: max-content;
+  position: relative;
 }
-
-#contact-form .input-container {
+#contacto form label {
   display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 0.4em;
+  flex-direction: column;
+  text-align: start;
+  padding: 0.5rem 0;
 }
-#contact-form label .contact-input {
-  box-sizing: border-box;
+#contacto form label input {
+  margin: 0 auto;
+  padding: 0.5rem;
+  font-size: 1.1rem;
   width: 99%;
-  padding: 0.5em 0.3em;
-  font-size: 1.1em;
 }
-#contact-form label {
+#contacto form label:nth-child(3) {
+  grid-row: 2;
+  grid-column: 1 / span 2;
   width: 100%;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
 }
-#contact-form textarea {
-  padding: 0.3rem;
-  min-width: 100%;
-  max-width: 1000%;
-  font-family: sans-serif;
-  font-size: 1.1em;
-  flex-grow: 1;
+#contacto form label:nth-child(3) textarea {
+  flex: 1; /* Hace que el textarea ocupe todo el espacio disponible */
+  resize: vertical; /* Permite redimensionar verticalmente */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.1rem;
 }
-
-#contact-form button {
+#contacto form button {
+  padding: 0.5rem 1rem;
+  grid-row: 3;
+  grid-column: 2;
   align-self: flex-end;
-  margin-top: 1.5%;
-  border: none;
+  right: 0;
   background: #234;
   color: white;
-  padding: 0.4em;
-  font-size: 1.2em;
+  border: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: fit-content;
+  justify-self: end;
+}
+#contacto form button:hover {
+  color: #def;
+  scale: 1.1;
+}
+#contact-form label {
+}
+#contact-form textarea {
+}
+
+#contacto form button {
+  grid-row: 3;
 }
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #contacto {
-    width: 100vw;
-    height: auto;
   }
   #contacto .container {
-    height: auto;
-    padding: 0;
-    padding-bottom: 10%;
-    width: 95%;
-    display: block;
-    text-align: center;
-    font-size: 18px;
   }
 
   #contacto .container-box {
-    width: 90%;
-    height: auto;
-    margin: auto;
   }
   #contacto .container-box iframe {
-    margin: 10% auto;
-    width: 80%;
-    height: 15em;
   }
   /* Titulo */
 
   #contacto .container-box h2 {
-    font-size: 2em;
   }
   #contacto .container-box .subtitle {
-    width: 80%;
-    margin: auto;
-    font-size: 1.2em;
   }
   /* Iconos */
   #contacto .contact-icons {
-    width: 90%;
-    height: auto;
-    margin: 6% auto;
   }
   #contacto .contact-card {
-    font-size: 16px;
-    width: 100%;
-    height: 6em;
   }
 
   #contacto .contact-card-content {
-    width: 100%;
   }
 
   #contacto .contact-icons .contact-card .contact-icon {
-    height: 90%;
-    width: 30%;
   }
   #contact-form {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-    text-align: start;
   }
 
   #contact-form label .contact-input {
-    font-size: 1.2em;
   }
 
   #contact-form textarea {
-    font-size: 1.2em;
-    height: 150px;
   }
 }
 @media (max-width: 768px) {
   #contacto {
-    width: 100vw;
-    height: auto;
   }
   #contacto .container {
-    height: auto;
-    width: 95%;
-    padding: 8% 0;
-    display: block;
-    text-align: center;
-    font-size: 18px;
   }
 
   #contacto .container-box {
-    width: 90%;
-    margin: auto;
-    height: auto;
   }
   #contacto .container-box iframe {
-    margin: 10% auto;
-    width: 90%;
-    height: 20em;
   }
   /* Titulo */
 
   #contacto .container-box .subtitle {
-    margin: auto;
-    font-size: 1.2em;
   }
   /* Iconos */
   #contacto .contact-icons {
-    width: 80%;
-    height: auto;
-    margin: 15% auto;
-    flex-direction: column;
   }
   #contacto .contact-card {
-    width: 100%;
-    height: 6em;
   }
 
   #contacto .contact-card-content {
-    width: 100%;
   }
   #contacto .contact-icons .contact-card .contact-icon {
-    height: 90%;
-    width: 30%;
   }
   #contact-form {
-    width: 90%;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 10%;
-    text-align: start;
   }
 
   #contact-form label .contact-input {
-    font-size: 1.2em;
   }
 
   #contact-form textarea {
-    font-size: 1em;
-    height: 200px;
   }
 
   #contact-form button {
-    margin-top: 5%;
-    padding: 0.5em;
-    font-size: 1em;
   }
 }
