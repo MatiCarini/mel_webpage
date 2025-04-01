@@ -28,7 +28,7 @@ img {
 .section {
   height: 100vh;
   text-align: center;
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 11vh;
 }
 .title {
   font-family:  monospace;

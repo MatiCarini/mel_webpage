@@ -1,160 +1,86 @@
-/*hero*/
 #hero {
-  height: 100vh;
+  height: 85vh;
+  margin-top: 15vh;
+  background: linear-gradient(#c0d7f766, #000),
+    url("../images/galeria/MecanizadoCNC1.jpg") fixed center/cover;
 }
-
-#hero .hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(#c7c8cc7f 45%, #000d 75%);
-}
-#hero .hero-bg .hero-content {
-  width: 100%;
+#hero .hero-content {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
 }
-
-#hero .hero-bg .hero-content .hero-logo {
-  width: 45%;
+#hero .hero-content .hero-logo {
+  width: 50%;
   height: auto;
-  margin-top: 9rem;
-  object-fit: contain;
-}
-
-#hero .hero-bg .hero-content .btn-action {
-  width: 100%;
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-  text-decoration: none;
-  color: white;
-  transition: all 0.3s;
-  flex-grow: 1;
-}
-
-#hero .hero-bg .hero-content .btn-action::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* Ocupa todo el espacio del botón */
-  background: linear-gradient(transparent, #000a);
-  opacity: 0; /* Inicialmente transparente */
-  transition: opacity 0.3s ease; /* Suaviza la transición */
-  z-index: -1; /* Se coloca detrás del contenido */
-}
-#hero .hero-bg .hero-content .btn-action:hover {
-  cursor: pointer;
-}
-#hero .hero-bg .hero-content .btn-action:hover::before {
-  opacity: 1;
-}
-
-#hero .hero-bg .hero-content .btn-action:hover i {
-  font-size: 3rem;
-}
-
-#hero .hero-bg .hero-content .btn-action .texto {
   margin: auto;
-  max-width: 60%;
-  background: transparent;
+}
+#hero .hero-content .btn-action {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height: 30%;
   align-items: center;
 }
-#hero .hero-bg .hero-content .btn-action .texto .title {
-  padding: 0.5rem;
-  font-weight: 600;
-  font-family: monospace;
-  font-size: 1.8rem;
+#hero .hero-content .btn-action:hover {
+  background: linear-gradient(transparent, #0005);
 }
-#hero .hero-bg .hero-content .btn-action .texto .subtitle {
-  padding: 0.5rem;
+
+#hero .hero-content .btn-action .texto {
+  font-family: sans-serif;
+  height: 70%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#hero .hero-content .btn-action .texto .title {
+  font-weight: 100;
+  font-size: 1.9em;
+}
+#hero .hero-content .btn-action .texto .subtitle {
   font-weight: 100;
   font-family: monospace;
-  color: #777;
-  font-size: 1.4rem;
-}
-#hero .hero-bg .hero-content .btn-action i {
-  font-size: 2rem;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.3s;
-}
-#hero .hero-bg .background {
-  position: absolute;
-  background: url("../images/hero2.jpg") fixed left/cover;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  filter: blur(3px);
-  z-index: -1000;
+  color: #aaa;
+  font-size: 1.6em;
 }
 @media ((min-width: 768px ) and ( max-width: 1024px)) {
   #hero {
     width: 100vw;
+    min-height: 85vh;
   }
-  #hero .hero-bg .background {
-    background: url("../images/hero2.jpg") fixed center/cover;
-    height: 100%;
-    width: 100vw;
-  }
-  #hero .hero-bg .hero-content .hero-logo {
+  #hero .hero-content .hero-logo {
     width: 50%;
-    margin-top: 5rem;
+    height: auto;
   }
-  #hero .hero-bg .hero-content .btn-action .texto {
+  #hero .hero-content .btn-action {
+    height: 50%;
+  }
+  #hero .hero-content .btn-action .texto {
     margin: auto;
-    max-width: 90%;
-  }
-  #hero .hero-bg .hero-content .btn-action .texto .title {
-    padding: 1em;
-    font-size: 1.6rem;
-  }
-  #hero .hero-bg .hero-content .btn-action .texto .subtitle {
-    font-size: 1.2rem;
-  }
-  #hero .hero-bg .hero-content .btn-action i {
-    padding-bottom: 0.5em;
+    width: 70%;
   }
 }
 /*hero*/
 @media (max-width: 768px) {
   #hero {
     width: 100vw;
+    min-height: 85vh;
   }
-  #hero .hero-bg .hero-content .hero-logo {
-    margin-top: 50%;
-    width: 95%;
+  #hero .hero-content .hero-logo {
+    width: 70%;
+    height: auto;
   }
-  #hero .hero-bg .background {
-    background: url("../images/hero2.jpg") fixed center / cover no-repeat;
+  #hero .hero-content .btn-action {
+    height: 60%;
   }
- 
-  #hero .hero-bg .hero-content .btn-action i {
-    padding-bottom: 1.5em;
+  #hero .hero-content .btn-action .texto {
+    width: 90%;
   }
-  #hero .hero-bg .hero-content .btn-action .texto {
-    max-width: 90%;
-  }
-  #hero .hero-bg .hero-content .btn-action .texto .title {
-    padding: 1em;
-    font-size: 1.2rem;
-  }
-  #hero .hero-bg .hero-content .btn-action .texto .subtitle {
-    font-size: 1.2rem;
-  }
-  
 }
+
 /* #202f88;*/

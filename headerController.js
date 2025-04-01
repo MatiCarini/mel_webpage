@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let scrollTop = getScrollPosition();
     console.log(scrollTop); // Verifica si esto se actualiza en móvil
 
-    if (scrollTop > 75) {
+    if (scrollTop > 25) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");

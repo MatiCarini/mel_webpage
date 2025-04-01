@@ -1,4 +1,4 @@
-#servicios{
+#servicios {
   height: auto;
 }
 #servicios div {
@@ -10,7 +10,7 @@
   text-align: center;
   padding: 2rem;
   font-size: 2.3rem;
-  background-color: black;
+  background-color: #234;
   color: white;
 }
 #servicios div h3 {
@@ -18,7 +18,7 @@
   text-transform: uppercase;
   padding: 3rem;
   font-size: 2rem;
-  color: #999;
+  color: #123;
   font-weight: 100;
 }
 #servicios div ul {
@@ -32,7 +32,7 @@
 #servicios div ul li {
   width: 23%;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px #0005;
+  box-shadow: 0 0 10px #1235;
 }
 #servicios div ul li figure {
   display: flex;
@@ -47,7 +47,7 @@
   text-align: center;
   font-size: 1.2em;
   padding: 0 3rem;
-  padding-bottom: 1rem
+  padding-bottom: 1rem;
 }
 #servicios div ul li figure figcaption p {
   padding: 2rem;
@@ -87,18 +87,17 @@
   }
 
   #servicios div ul li figure img {
-    margin:2rem auto;
+    margin: 2rem auto;
     width: 35%;
   }
-#servicios div ul li figure figcaption h4 {
-  padding: 0 2rem;
-  padding-bottom: 0.7rem
-}
-#servicios div ul li figure figcaption p {
-  padding: 0 3rem;
-  padding-bottom: 2rem
-
-}
+  #servicios div ul li figure figcaption h4 {
+    padding: 0 2rem;
+    padding-bottom: 0.7rem;
+  }
+  #servicios div ul li figure figcaption p {
+    padding: 0 3rem;
+    padding-bottom: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -122,7 +121,7 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    gap : 3rem;
+    gap: 3rem;
   }
   #servicios div ul li {
     width: 100%;
@@ -143,5 +142,4 @@
   #servicios div ul li figure figcaption h4 {
     padding-bottom: 1rem;
   }
-  
 }
