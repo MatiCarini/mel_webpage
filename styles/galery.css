@@ -1,43 +1,44 @@
 #galeria {
   margin-bottom: 5vh;
 }
-#galeria .cards-container {
+#galeria div {
   width: 100%;
 }
-#galeria .cards-container h2 {
+#galeria div h2 {
   font-size: 2.5rem;
   padding: 2rem;
   text-transform: uppercase;
   font-weight: 100;
   font-family: monospace;
 }
-#galeria .cards-container ul {
+#galeria div ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   width: 90%;
-  height: 70vh;
+  height: 60vh;
+  gap: 1rem;
 }
-#galeria .cards-container ul li {
+#galeria div ul li {
   display: contents;
   list-style: none;
 }
-#galeria .cards-container ul li figure {
+#galeria div ul li figure {
   position: relative;
   width: 100%;
   align-content: center;
 }
-#galeria .cards-container ul li figure img {
+#galeria div ul li figure img {
   box-shadow: 0 0 5px 0 #000;
   border-radius: 0.5rem;
   object-fit: cover;
   object-position: center;
-  height: 95%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   margin: auto;
 }
 
-#galeria .cards-container ul li figure figcaption {
+#galeria div ul li figure figcaption {
   display: none;
   position: absolute;
   top: 50%;
@@ -45,24 +46,24 @@
   transform: translate(-50%, -50%);
   background: linear-gradient(#000a, #012c);
   border-radius: 0.5rem;
-  height: 95%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   margin: auto;
   color: white;
   font-size: 1.8rem;
   transition: all 0.3 ease;
 }
-#galeria .cards-container ul li figure:hover figcaption {
+#galeria div ul li figure:hover figcaption {
   display: flex;
 }
-#galeria .cards-container ul li figure figcaption p {
+#galeria div ul li figure figcaption p {
   padding: 1rem 2rem;
   height: fit-content;
   align-self: center;
   margin: 0 auto;
 }
 
-#galeria .cards-container .galeria-button {
+#galeria div .galeria-button {
   padding: 0.8% 1%;
   background: #234;
   margin: 3% auto;
@@ -70,13 +71,13 @@
 
   border: none;
 }
-#galeria .cards-container .galeria-button a {
+#galeria div .galeria-button a {
   font-size: 1.4em;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
 }
-#galeria .cards-container .galeria-button:hover {
+#galeria div .galeria-button:hover {
   font-weight: bold;
   scale: 1.1;
 }
@@ -85,24 +86,23 @@
     width: 100vw;
     height: auto;
   }
-  #galeria .cards-container {
+  #galeria div {
     height: auto;
   }
-  #galeria .cards-container h2 {
+  #galeria div h2 {
     font-size: 4em;
   }
-  #galeria .cards-container ul {
+  #galeria div ul {
     flex-direction: column;
-    width: 70%;
+    width: 70vw;
     height: auto;
   }
-  #galeria .cards-container ul li {
-    height: 30em;
-    width: 30em;
+  #galeria div ul li figure {
+    height: 60vh;
     margin: 2.5% auto;
   }
 
-  #galeria .cards-container .galeria-button {
+  #galeria div .galeria-button {
     padding: 2em;
     margin: 5% auto;
   }
@@ -112,27 +112,27 @@
     width: 100vw;
     height: auto;
   }
-  #galeria .cards-container {
+  #galeria div {
     width: 100%;
     height: auto;
   }
-  #galeria .cards-container h2 {
+  #galeria div h2 {
     font-size: 4em;
     padding: 20% 0;
     padding-bottom: 10%;
   }
-  #galeria .cards-container ul {
+  #galeria div ul {
     width: 80vw;
     flex-direction: column;
     height: auto;
   }
-  #galeria .cards-container ul li {
-    width: 100%;
-    height: 40vh;
+  #galeria div ul li figure {
+    width: 95%;
+    height: 50vh;
     margin: 5% auto;
   }
 
-  #galeria .cards-container .galeria-button {
+  #galeria div .galeria-button {
     padding: 2em;
     margin: 5% auto;
   }
