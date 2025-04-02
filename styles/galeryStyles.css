@@ -4,6 +4,12 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
 
 section {
   text-align: center;
@@ -43,6 +49,7 @@ section h3 {
 }
 
 #theme div figure {
+  box-shadow: 0 0 5px #000;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -80,7 +87,7 @@ section h3 {
   width: 100vw;
 }
 
-#overhauling div {
+#overhauling .content {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -95,9 +102,9 @@ section h3 {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  gap: 0;
 }
 #overhauling div figure div img {
+  box-shadow: 0 0 5px #000;
   width: 49.5%;
   height: 100%;
   object-fit: cover;
@@ -122,4 +129,46 @@ section h3 {
 #overhauling p a:hover {
   font-weight: bolder;
   text-decoration: none;
+}
+
+@media ((min-width: 0 ) and ( max-width: 1024px)) {
+  #theme div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 0.5rem;
+  }
+  #overhauling div figure {
+    box-shadow: 0 0 5px #000;
+  }
+  #overhauling div figure div img {
+    width: 50%;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #theme div {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 3rem 0;
+  }
+  #overhauling div figure {
+    box-shadow: none;
+  }
+  #overhauling div figure div {
+    flex-direction: column;
+    box-shadow: none;
+    gap: 0.5rem;
+  }
+  #overhauling div figure div img {
+    width: 100%;
+    height: 95%;
+    box-shadow: 0 0 5px #000;
+  }
+  #overhauling p {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+  }
 }

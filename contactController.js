@@ -1,6 +1,6 @@
 window.onload = function () {
   emailjs.init({
-    publicKey: "XNcrD3C9MgUOTXfDL",
+    publicKey: "PRhhMTihIlDgfA-qY",
   });
   document
     .getElementById("contact-form")
@@ -12,7 +12,9 @@ window.onload = function () {
           alert("Email enviado con éxito");
         },
         (error) => {
-          alert("Error al enviar su email. Por favor intente enviandonos un email directamente a @metalurgicalobato@gmail.com desde su cuenta.");
+          alert(
+            "Error al enviar su email. Por favor intente enviandonos un email directamente a @metalurgicalobato@gmail.com desde su cuenta."
+          );
         }
       );
       document.getElementById("contact-form").reset();
