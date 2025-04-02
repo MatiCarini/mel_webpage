@@ -126,6 +126,6 @@ section {
   .section {
     scroll-margin-top: var(--header-height-mobile);
     height: auto;
-    width: 100vw;
+    min-height: 100vh;
   }
 }
