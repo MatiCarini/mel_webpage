@@ -82,6 +82,7 @@ body {
   line-height: 1.6;
   overflow-y: auto;
   text-align: center;
+  width: 100vh;
 }
 
 img {
