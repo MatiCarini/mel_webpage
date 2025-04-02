@@ -1,139 +1,152 @@
-#galeria {
+/* ==========================================================================
+   GALLERY SECTION STYLES
+   ========================================================================== */
+
+.gallery {
+  width: 100%;
+  padding: 4rem 0;
   margin-bottom: 5vh;
 }
-#galeria div {
+
+.gallery__container {
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
-#galeria div h2 {
-  font-size: 2.5rem;
+
+.gallery__title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
   padding: 2rem;
   text-transform: uppercase;
-  font-weight: 100;
-  font-family: monospace;
+  font-weight: 300;
+  font-family: var(--font-heading);
+  text-align: center;
+  color: var(--color-primary);
 }
-#galeria div ul {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   width: 90%;
-  height: 60vh;
-  gap: 1rem;
-}
-#galeria div ul li {
-  display: contents;
+  margin: 0 auto;
+  padding: 1rem 0;
   list-style: none;
 }
-#galeria div ul li figure {
+
+.gallery__item {
   position: relative;
-  width: 100%;
-  align-content: center;
-}
-#galeria div ul li figure img {
-  box-shadow: 0 0 5px 0 #000;
   border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  aspect-ratio: 4/3;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
-  height: 100%;
-  width: 100%;
-  margin: auto;
+  transition: transform 0.3s ease;
 }
 
-#galeria div ul li figure figcaption {
-  display: none;
+.gallery__caption {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(#000a, #012c);
-  border-radius: 0.5rem;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: auto;
-  color: white;
-  font-size: 1.8rem;
-  transition: all 0.3 ease;
-}
-#galeria div ul li figure:hover figcaption {
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 34, 68, 0.8));
+  color: var(--color-light);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  text-align: center;
 }
-#galeria div ul li figure figcaption p {
+
+.gallery__caption-text {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.4;
+}
+
+.gallery__item:hover .gallery__image {
+  transform: scale(1.05);
+}
+
+.gallery__item:hover .gallery__caption,
+.gallery__item:focus-within .gallery__caption {
+  opacity: 1;
+}
+
+.gallery__button {
+  display: block;
+  width: fit-content;
   padding: 1rem 2rem;
-  height: fit-content;
-  align-self: center;
-  margin: 0 auto;
-}
-
-#galeria div .galeria-button {
-  padding: 0.8% 1%;
-  background: #234;
-  margin: 3% auto;
-  transition: all 0.3s;
-
-  border: none;
-}
-#galeria div .galeria-button a {
-  font-size: 1.4em;
-  color: white;
-  text-decoration: none;
+  margin: 2rem auto 0;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
   text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-#galeria div .galeria-button:hover {
-  font-weight: bold;
-  scale: 1.1;
+
+.gallery__button:hover,
+.gallery__button:focus {
+  transform: scale(1.05);
+  background-color: var(--color-primary-dark);
+  outline: none;
+  text-decoration: underline;
 }
-@media ((min-width: 768px ) and ( max-width: 1024px)) {
-  #galeria {
-    width: 100vw;
-    height: auto;
-  }
-  #galeria div {
-    height: auto;
-  }
-  #galeria div h2 {
-    font-size: 4em;
-  }
-  #galeria div ul {
-    flex-direction: column;
-    width: 70vw;
-    height: auto;
-  }
-  #galeria div ul li figure {
-    height: 60vh;
-    margin: 2.5% auto;
+.gallery__button a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 85%;
   }
 
-  #galeria div .galeria-button {
-    padding: 2em;
-    margin: 5% auto;
+  .gallery__item:nth-child(3) {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
   }
 }
+
 @media (max-width: 768px) {
-  #galeria {
-    width: 100vw;
-    height: auto;
-  }
-  #galeria div {
-    width: 100%;
-    height: auto;
-  }
-  #galeria div h2 {
-    font-size: 4em;
-    padding: 20% 0;
-    padding-bottom: 10%;
-  }
-  #galeria div ul {
-    width: 80vw;
-    flex-direction: column;
-    height: auto;
-  }
-  #galeria div ul li figure {
-    width: 95%;
-    height: 50vh;
-    margin: 5% auto;
+  .gallery {
+    padding: 3rem 0;
   }
 
-  #galeria div .galeria-button {
-    padding: 2em;
-    margin: 5% auto;
+  .gallery__title {
+    padding: 1rem 0 2rem;
+  }
+
+  .gallery__grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 2rem;
+  }
+
+  .gallery__item:nth-child(3) {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+
+  .gallery__button {
+    padding: 1.5rem 3rem;
+    margin: 3rem auto 0;
   }
 }

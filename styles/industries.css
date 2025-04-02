@@ -1,130 +1,127 @@
-/* Estilos base para todos los dispositivos */
-#industrias {
+/* ==========================================================================
+   INDUSTRIES SECTION STYLES
+   ========================================================================== */
+
+.industries {
   width: 100%;
-  height: 100%;
   display: flex;
+  padding: 4rem 0;
+  text-align: center;
 }
 
-#industrias .container {
+.industries__container {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-#industrias .industrias-title {
+
+.industries__title {
   text-transform: uppercase;
-  padding: 5%;
-  font-size: 2rem;
+  padding: 2rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
   text-align: center;
-  width: 100%;
+  color: var(--color-primary);
 }
 
-#industrias .container .list-content {
-  margin: 0 auto;
-  margin-bottom: 5%;
+.industries__list {
   list-style: none;
   padding: 0;
-  width: 70%;
-  display: flex;
-  align-items: start;
+  width: 80%;
+  margin: 3rem auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
 }
 
-#industrias .list-content li {
-  display: contents;
-}
-
-#industrias .list-content li figure {
-  margin: 0;
+.industries__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  width: 20%;
-  padding: 5% 1%;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-#industrias .list-content li img {
+.industries__item:hover {
+  transform: translateY(-5px);
+}
+
+.industries__image {
   width: 60%;
+  max-width: 120px;
+  height: auto;
   object-fit: contain;
-  object-position: center;
-  margin-bottom: 10%;
+  margin-bottom: 1.5rem;
 }
 
-#industrias .list-content li figcaption {
+.industries__caption {
   text-align: center;
-  width: 100%;
 }
 
-#industrias .list-content li figcaption h2 {
-  font-size: 1.2;
+.industries__name {
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
   text-transform: uppercase;
-  color: #202f99;
-  font-weight: 500;
+  color: var(--industries-color-primary);
+  font-weight: 600;
   margin: 0;
+  line-height: 1.3;
 }
 
-/* Estilos para tablet (768px-1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #industrias .industrias-title {
-    padding: 10%;
-  }
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
 
-  #industrias .container {
-    box-sizing: content-box;
-    padding: 10%;
-  }
-  #industrias .container .list-content {
-    display: grid;
+@media (max-width: 1024px) {
+  .industries__list {
     grid-template-columns: repeat(2, 1fr);
     width: 85%;
-    padding: 2.5%;
-    height: fit-content;
+    gap: 1.5rem;
   }
-  #industrias .list-content li figure {
-    padding: 2.5%;
-    width: 100%;
+
+  .industries__item {
+    padding: 1rem;
   }
-  #industrias .list-content li:nth-child(5) figure {
+
+  .industries__item:nth-child(5) {
     grid-column: 1 / span 2;
     width: 50%;
     margin: 0 auto;
   }
 
-  #industrias .list-content li img {
-    margin-bottom: 8%;
-  }
-
-  #industrias .list-content li figcaption h2 {
-    font-size: 1.2rem;
+  .industries__image {
+    margin-bottom: 1rem;
   }
 }
 
-/* Estilos para móviles (hasta 767px) */
-@media (max-width: 767px) {
-  #industrias {
-    padding: 10% 0;
-    height: auto;
+@media (max-width: 768px) {
+  .industries {
+    min-height: auto;
+    padding: 3rem 0;
   }
-  #industrias .container .industrias-title {
-    font-size: 1.8rem;
-  }
-  #industrias .container .list-content {
+
+  .industries__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10% 0;
-    width: 60%;
-  }
-  #industrias .list-content li figure {
     width: 80%;
+    gap: 2rem;
   }
 
-  #industrias .list-content li img {
-    height: 100%;
-    margin-bottom: 5%;
+  .industries__item {
+    width: 100%;
+    padding: 1.5rem 0;
   }
 
-  #industrias .list-content li figcaption h2 {
-    font-size: 1.4rem;
+  .industries__item:nth-child(5) {
+    width: 100%;
+  }
+
+  .industries__image {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .industries__name {
+    font-size: 1.2rem;
   }
 }

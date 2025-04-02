@@ -3,262 +3,361 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta
       name="description"
-      content="Nos dedicamos a la fabricación de piezas
-    mecanizadas de alta precisión. Somos especializamos en la restauracion integral y reparacion de
-    maquinaria industrial alimenticia. "
+      content="Galería de trabajos realizados por Metalúrgica Eduardo Lobato. Piezas mecanizadas de precisión, overhauling y reparación de maquinaria industrial."
     />
-    <meta content="Metalúrgica Eduardo Lobato e hijos" property="og:title" />
+    <meta
+      property="og:title"
+      content="Galería - Metalúrgica Eduardo Lobato e hijos"
+    />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://maticarini.github.io/mel_webpage/"
+      content="https://maticarini.github.io/mel_webpage/galeria.html"
     />
-    <meta property="og:title" content="Metalúrgica Eduardo Lobato e hijos" />
     <meta
       property="og:description"
-      content="Nos dedicamos a la fabricación de piezas
-        mecanizadas de alta precisión. Somos especialistas en la restauracion integral y reparacion de
-        maquinaria industrial alimenticia. "
+      content="Galería de nuestros trabajos en fabricación de piezas mecanizadas y reparación de maquinaria industrial."
     />
     <meta
       property="og:image"
       content="https://maticarini.github.io/mel_webpage/images/img-og.png"
     />
-    <meta
-      property="og:url"
-      content="https://maticarini.github.io/mel_webpage/galeria.html"
-    />
 
-    <link rel="stylesheet" href="./styles/galeryStyles.css" />
-    <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
-
-    <title>Galeria - Metalúrgica Eduardo Lobato e hijos</title>
+    <title>
+      Galería - Metalúrgica Eduardo Lobato e hijos | Piezas Mecanizadas
+    </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <!-- Header-->
-    <header id="main-header">
-      <div class="header-content">
-        <a class="logo-link" href="">
-          <img src="./images/11-gris.svg" alt="logo" />
+    <header class="header" id="main-header">
+      <div class="header__container">
+        <a class="header__logo" href="./" aria-label="Inicio">
+          <img
+            src="./images/11-gris.svg"
+            alt="Logo Metalúrgica Eduardo Lobato"
+            class="header__logo-img"
+          />
         </a>
-        <nav id="header-nav" class="header-nav" aria-label="main-nav">
-          <ul>
-            <li>
-              <a href="index.html#servicios" target="_blank"> Servicios </a>
+
+        <nav
+          class="header__nav"
+          id="header-nav"
+          aria-label="Navegación principal"
+        >
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#servicios" class="header__nav-link">Servicios</a>
             </li>
-            <li>
-              <a href="index.html#nosotros" target="_blank">Nosotros </a>
+            <li class="header__nav-item">
+              <a href="#nosotros" class="header__nav-link">Nosotros</a>
             </li>
-            <li>
-              <a href="index.html#galeria" target="_blank"> Galeria </a>
+            <li class="header__nav-item">
+              <a href="#galeria" class="header__nav-link">Galería</a>
             </li>
-            <li>
-              <a href="index.html#contacto" target="_blank">Contacto</a>
+            <li class="header__nav-item">
+              <a href="#contacto" class="header__nav-link">Contacto</a>
             </li>
           </ul>
         </nav>
-        <div class="hamburger-menu" id="hamburger-menu">☰</div>
+
+        <button
+          class="header__menu-toggle"
+          id="hamburger-menu"
+          aria-label="Menú móvil"
+          aria-expanded="false"
+          aria-controls="header-nav"
+        >
+          ☰
+        </button>
       </div>
     </header>
 
-    <section id="hero">
-      <h2>Galeria</h2>
-    </section>
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="gallery-page-heading"
+        class="gallery-page-heading"
+        aria-labelledby="gallery-page-heading"
+      >
+        <h1 id="gallery-page-heading">Galería</h1>
+      </section>
 
-    <section id="theme">
-      <h3>Trabajos realizados</h3>
-      <div class="content">
-        <figure class="card">
-          <img
-            src="./images/galeria/cinta-transportadora.jpg"
-            alt="Cinta transportadora para cursos iniciales"
-          />
-          <figcaption class="description">
-            <p>Cinta transportadora para cursos iniciales</p>
-          </figcaption>
-        </figure>
-
-        <figure class="card">
-          <img
-            src="./images/galeria/dosificadordesemillas.jpg"
-            alt="Dosificador de semillas con visor Picos de llenado de bolsas de harina Materiales:Aisi 304"
-          />
-          <figcaption class="description">
-            <p>
-              Dosificador de semillas con visor <br />
-              Picos de llenado de bolsas de harina <br />
-              Materiales: Aisi 304
-            </p>
-          </figcaption>
-        </figure>
-
-        <figure class="card">
-          <img
-            src="./images/galeria/mordazadesellado.jpg"
-            alt="Mordaza de sellado"
-          />
-          <figcaption class="description">
-            <p>Mordaza de sellado</p>
-          </figcaption>
-        </figure>
-
-        <figure class="card">
-          <img
-            src="./images/galeria/cuchillas-de-corte.jpg"
-            alt="Cuchillas para corte de bolsas. (CNC)"
-          />
-          <figcaption class="description">
-            <p>Cuchillas para corte de bolsas. (CNC)</p>
-          </figcaption>
-        </figure>
-
-        <figure class="card">
-          <img
-            src="./images/galeria/MecanizadoCNC.jpg"
-            alt=" Mecanizado de acople para bomba. (CNC)"
-          />
-          <figcaption class="description">
-            <p>Mecanizado de acople para bomba. (CNC)</p>
-          </figcaption>
-        </figure>
-        <figure class="card">
-          <img
-            src="./images/galeria/soporteempaquetadora.jpg"
-            alt="Soportes empaquetadoras UVA Aluminio 7075"
-          />
-          <figcaption class="description">
-            <p>
-              Soportes empaquetadoras <br />
-              UVA Aluminio 7075 (CNC)
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="overhauling">
-      <h3>Overhauling</h3>
-      <div class="content">
-        <figure class="card">
-          <div>
+      <!-- Trabajos Realizados -->
+      <section
+        id="theme"
+        aria-labelledby="works-heading"
+        class="gallery-page-section"
+      >
+        <h2 id="works-heading">Trabajos realizados</h2>
+        <div class="gallery-page-grid">
+          <figure class="gallery-page-card">
             <img
-              src="./images/galeria/overhaulin-1a.jpg"
-              alt="Fabricación de bujes, ejes, pintura ANTES"
+              src="./images/galeria/cinta-transportadora.jpg"
+              alt="Cinta transportadora para cursos iniciales fabricada en acero inoxidable"
+              loading="lazy"
             />
-            <img
-              src="./images/galeria/overhaulin-1b.jpg"
-              alt="Fabricación de bujes, ejes, pintura DESPUES"
-            />
-          </div>
-          <figcaption class="description">
-            Fabricación de bujes, ejes, pintura
-          </figcaption>
-        </figure>
+            <figcaption class="gallery-page-caption">
+              <p>Cinta transportadora para cursos iniciales</p>
+            </figcaption>
+          </figure>
 
-        <figure>
-          <div>
+          <figure class="gallery-page-card">
             <img
-              src="./images/galeria/overhaulin-2-a.jpg"
-              alt="Trabajo de reparación en porta bobina ANTES"
+              src="./images/galeria/dosificadordesemillas.jpg"
+              alt="Dosificador de semillas con visor y picos de llenado de bolsas de harina en material Aisi 304"
+              loading="lazy"
             />
+            <figcaption class="gallery-page-caption">
+              <p>
+                Dosificador de semillas con visor <br />
+                Picos de llenado de bolsas de harina <br />
+                Materiales: Aisi 304
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-page-card">
             <img
-              src="./images/galeria/overhaulin-2b.jpg"
-              alt="Trabajo de reparación en porta bobina DESPUES"
+              src="./images/galeria/mordazadesellado.jpg"
+              alt="Mordaza de sellado para empaquetadora industrial"
+              loading="lazy"
             />
-          </div>
-          <figcaption class="description">
-            Trabajo de reparación en porta bobina
-          </figcaption>
-        </figure>
-      </div>
-      <p>
-        Ver más en nuestro
-        <a href="https://www.instagram.com/metalurgicalobato/" target="_blank"
-          >Instagram</a
-        >
-      </p>
-    </section>
+            <figcaption class="gallery-page-caption">
+              <p>Mordaza de sellado</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-page-card">
+            <img
+              src="./images/galeria/cuchillas-de-corte.jpg"
+              alt="Cuchillas para corte de bolsas fabricadas con mecanizado CNC"
+              loading="lazy"
+            />
+            <figcaption class="gallery-page-caption">
+              <p>Cuchillas para corte de bolsas. (CNC)</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-page-card">
+            <img
+              src="./images/galeria/MecanizadoCNC.jpg"
+              alt="Mecanizado CNC de acople para bomba hidráulica"
+              loading="lazy"
+            />
+            <figcaption class="gallery-page-caption">
+              <p>Mecanizado de acople para bomba. (CNC)</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-page-card">
+            <img
+              src="./images/galeria/soporteempaquetadora.jpg"
+              alt="Soportes para empaquetadoras fabricados en Aluminio 7075 con mecanizado CNC"
+              loading="lazy"
+            />
+            <figcaption class="gallery-page-caption">
+              <p>
+                Soportes empaquetadoras <br />
+                UVA Aluminio 7075 (CNC)
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Overhauling -->
+      <section
+        id="overhauling"
+        aria-labelledby="overhauling-heading"
+        class="gallery-page-overhauling"
+      >
+        <div class="content">
+          <h2 id="overhauling-heading">Overhauling</h2>
+
+          <figure class="gallery-page-overhauling-card">
+            <div class="gallery-page-overhauling-images">
+              <img
+                src="./images/galeria/overhaulin-1a.jpg"
+                alt="Fabricación de bujes y ejes antes de la reparación"
+                loading="lazy"
+              />
+              <img
+                src="./images/galeria/overhaulin-1b.jpg"
+                alt="Fabricación de bujes y ejes después de la reparación y pintura"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-page-overhauling-caption">
+              Fabricación de bujes, ejes, pintura
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-page-overhauling-card">
+            <div class="gallery-page-overhauling-images">
+              <img
+                src="./images/galeria/overhaulin-2-a.jpg"
+                alt="Porta bobina antes de la reparación"
+                loading="lazy"
+              />
+              <img
+                src="./images/galeria/overhaulin-2b.jpg"
+                alt="Porta bobina después de la reparación"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-page-overhauling-caption">
+              Trabajo de reparación en porta bobina
+            </figcaption>
+          </figure>
+
+          <p class="gallery-page-overhauling-instagram">
+            Ver más en nuestro
+            <a
+              href="https://www.instagram.com/metalurgicalobato/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Síguenos en Instagram"
+            >
+              Instagram
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer id="main-footer">
-      <div class="footer-container">
-        <img src="./images/11-gris.svg" alt="logo" />
-        <nav aria-label="footer-navigation">
-          <ul class="nav-list">
-            <li><a class="link" href="#nosotros">Nosotros</a></li>
-            <li><a class="link" href="#servicios">Servicios</a></li>
-            <li><a class="link" href="#galeria">Galeria</a></li>
-            <li><a class="link" href="#contacto">Contacto</a></li>
+    <footer class="footer" id="main-footer">
+      <div class="footer__container">
+        <img
+          src="./images/11-gris.svg"
+          alt="Logo Metalúrgica Eduardo Lobato"
+          class="footer__logo"
+        />
+
+        <nav class="footer__nav" aria-label="Navegación secundaria">
+          <ul class="footer__nav-list">
+            <li><a href="#nosotros" class="footer__nav-link">Nosotros</a></li>
+            <li>
+              <a href="#servicios" class="footer__nav-link">Servicios</a>
+            </li>
+            <li><a href="#galeria" class="footer__nav-link">Galería</a></li>
+            <li><a href="#contacto" class="footer__nav-link">Contacto</a></li>
           </ul>
         </nav>
-        <ul class="contact-list">
-          <li class="contact-card">
+
+        <ul class="footer__contact-list">
+          <li class="footer__contact-item">
             <figure>
-              <img src="./images/whatsapp.webp" alt="" />
-              <figcaption class="contact-card-content">
+              <img
+                src="./images/whatsapp.webp"
+                alt="Contacto por WhatsApp"
+                class="footer__contact-icon"
+              />
+              <figcaption class="footer__contact-info">
                 <p>
-                  <a href="https://wa.me/5492324541053" target="_blank"
-                    >+5492324541053</a
+                  <a
+                    href="https://wa.me/5492324541053"
+                    class="footer__contact-link"
+                    target="_blank"
+                    rel="noopener"
                   >
+                    +5492324541053
+                  </a>
                 </p>
                 <p>
-                  <a href="https://wa.me/5492324673966" target="_blank"
-                    >+5492324673966</a
+                  <a
+                    href="https://wa.me/5492324673966"
+                    class="footer__contact-link"
+                    target="_blank"
+                    rel="noopener"
                   >
+                    +5492324673966
+                  </a>
                 </p>
               </figcaption>
             </figure>
           </li>
-          <li class="contact-card">
+
+          <li class="footer__contact-item">
             <figure>
-              <img src="./images/mail.svg" alt="" />
-              <figcaption class="contact-card-content">
-                <p>metalurgicalobato@gmail.com</p>
+              <img
+                src="./images/mail.svg"
+                alt="Contacto por email"
+                class="footer__contact-icon"
+              />
+              <figcaption class="footer__contact-info">
+                <p>
+                  <a
+                    href="mailto:metalurgicalobato@gmail.com"
+                    class="footer__contact-link"
+                  >
+                    metalurgicalobato@gmail.com
+                  </a>
+                </p>
               </figcaption>
             </figure>
           </li>
-          <li class="contact-card">
+
+          <li class="footer__contact-item">
             <figure>
-              <img src="./images/location.svg" alt="" />
-              <figcaption class="contact-card-content">
-                <p>
-                  Calle 15 y 102 <br />
+              <img
+                src="./images/location.svg"
+                alt="Ubicación"
+                class="footer__contact-icon"
+              />
+              <figcaption class="footer__contact-info">
+                <address>
+                  Calle 15 y 102<br />
                   Mercedes, Buenos Aires
-                </p>
+                </address>
               </figcaption>
             </figure>
           </li>
         </ul>
-        <div class="redes">
-          <a
-            href="https://www.instagram.com/metalurgicalobato/"
-            target="_blank"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/metalurgica-lobato-575750133/"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
+
+        <div class="footer__social">
+          <div class="footer__social-links">
+            <a
+              href="https://www.instagram.com/metalurgicalobato/"
+              class="footer__social-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/metalurgica-lobato-575750133/"
+              class="footer__social-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <p>Metalúrgica Eduardo Lobato e hijos. © 2025</p>
+
+      <p class="footer__copyright">
+        Metalúrgica Eduardo Lobato e hijos. © 2025
+      </p>
     </footer>
+
+    <script src="headerController.js" defer></script>
   </body>
-  <script type="text/javascript" src="headerController.js"></script>
 </html>

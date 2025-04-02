@@ -1,65 +1,123 @@
-#nosotros {
-  align-content: center;
-  height: 90vh;
-  font-size: 22px;
-}
-#nosotros .container {
-  position: relative;
-  background: linear-gradient(transparent, #200c 40%),
-    url("../images/12.jpg") top/cover no-repeat;
-  box-sizing: border-box;
-  background-color: transparent;
-  align-content: center;
-  padding: 14vh 0;
-  box-shadow: 0 0 15px #000;
-}
-#nosotros .container .content {
-  background: transparent;
-  text-align: left;
-  color: white;
-  align-content: center;
-  font-size: 0.9em;
-  width: 80%;
-  margin: auto;
+/* ==========================================================================
+   ABOUT US SECTION STYLES
+   ========================================================================== */
+
+.about {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
 }
 
-#nosotros .container h4 {
-  font-weight: 100;
-  width: 60%;
-  margin: 2% 1%;
-  font-size: 1.1em;
-  color: #ddd;
-}
-.continue-button {
+.about__container {
+  position: relative;
   width: 100%;
-  padding: 0.5%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(34, 34, 34, 0.8) 40%),
+    url("../images/12.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.about__content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--color-light);
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.about__title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 2rem;
+  color: var(--color-light);
+  font-weight: 400;
+}
+
+.about__text {
+  font-weight: 300;
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem 0;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.about__continue {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
+  width: 100%;
+  text-align: center;
   background: transparent;
   border: none;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
-.continue-button a {
-  width: 100%;
-  color: #fff9;
-  font-size: 3em;
+
+.about__continue-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(2rem, 4vw, 3rem);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
-.continue-button:hover {
-  font-size: 1.1em;
+
+.about__continue-link:hover,
+.about__continue-link:focus {
+  color: var(--color-light);
+  transform: translateY(5px);
+  outline: none;
 }
-@media ((min-width: 768px ) and ( max-width: 1024px)) {
-  #nosotros {
-    width: 100vw;
-    height: auto;
-    font-size: 18px;
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .about {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .about__content {
+    width: 85%;
+    padding: 1.5rem;
+  }
+
+  .about__text {
+    width: 80%;
   }
 }
 
 @media (max-width: 768px) {
-  #nosotros {
-    width: 100vw;
-    height: auto;
-    font-size: 16px;
+  .about {
+    font-size: 1rem;
+  }
+  .about__container {
+    flex-direction: column;
+  }
+  .about__content {
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about__text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about__continue {
+    position: relative;
+    bottom: 0;
+    margin-top: 2rem;
   }
 }

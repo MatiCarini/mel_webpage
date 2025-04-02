@@ -1,173 +1,208 @@
-footer {
-  background: #c7c8cc;
-  color: black;
-  padding: 1rem 0;
-  height: 40vh;
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+
+.footer {
   width: 100%;
-  align-content: center;
-  font-family: sans-serif;
+  background: var(--color-footer-bg);
+  color: var(--color-dark);
+  padding: 2rem 0;
+  font-family: var(--font-main);
 }
 
-#main-footer p {
-  width: 80%;
-  font-weight: 100;
-  letter-spacing: -0.02rem;
-  text-align: start;
-  color: #333;
+.footer__container {
+  width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
-}
-#main-footer div {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: 1;
-  height: 80%;
-  width: 60%;
-  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
-#main-footer div img {
+.footer__logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  align-self: center;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.footer__nav-link:hover,
+.footer__nav-link:focus {
+  font-weight: bold;
+  outline: none;
+}
+
+.footer__contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.footer__contact-item figure {
+  display: contents;
+}
+.footer__contact-icon {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
-#main-footer div nav .nav-list {
-  list-style: none;
-  text-transform: uppercase;
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 80%;
+.footer__contact-info {
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  word-break: break-word;
 }
 
-#main-footer div nav .nav-list li a {
+.footer__contact-link {
+  color: inherit;
   text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
-  transition: all 0.3s;
-}
-#main-footer a:hover {
-  font-weight: bolder;
-}
-#main-footer div .contact-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 80%;
-  width: 100%;
-}
-#main-footer div .contact-list li {
-  display: contents;
-}
-#main-footer div .contact-list li figure {
-  display: flex;
-  align-items: center;
-}
-#main-footer div .contact-list li figure img {
-  height: 50px;
-}
-#main-footer div .contact-list li figure figcaption {
-  width: 100%;
-}
-#main-footer div .contact-list li figure figcaption p {
-  text-align: left;
-  font-size: 1.2rem;
-  word-break: break-all;
-}
-#main-footer .redes {
-  width: 100%;
-  height: 80%;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-#main-footer .redes a {
-  color: black;
-  font-size: 4rem;
-  height: fit-content;
-  transition: all 0.3s;
-}
-#main-footer .redes a:hover {
-  font-size: 5rem;
+  transition: color 0.3s ease;
 }
 
-@media ((min-width: 768px ) and ( max-width: 1024px)) {
-  #footer {
-    width: 100vw;
-  }
-  #main-footer .footer-rights {
-    width: 90%;
-    font-weight: 100;
-  }
-  #main-footer div {
-    width: 90%;
-  }
-  #main-footer div img {
-    height: 50%;
-  }
-  #main-footer div nav {
-    padding: 0 1rem;
-  }
-  #main-footer div nav .nav-list li a {
-    font-size: 1.1rem;
-  }
-  #main-footer div .contact-list li figure figcaption {
-    padding-left: 0.5rem;
-  }
-  #main-footer div .contact-list li figure figcaption p {
-    margin: 0;
-    word-break: break-all;
-  }
-  #main-footer div .redes {
-    align-items: flex-start;
-  }
-  #main-footer div .redes a {
-    font-size: 3rem;
-  }
+.footer__contact-link:hover,
+.footer__contact-link:focus {
+  color: var(--color-accent);
+  outline: none;
 }
-@media ((max-width: 768px )) {
-  #main-footer {
-    width: 100vw;
-    height: auto;
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__social-link {
+  color: var(--color-dark);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  transition: all 0.3s ease;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.footer__copyright {
+  width: 90%;
+  max-width: 1400px;
+  margin: 1rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
   }
-  #main-footer .footer-rights {
-    width: 80%;
+
+  .footer__logo {
+    grid-column: span 2;
     margin: 0 auto;
   }
-  #main-footer div {
-    display: flex;
-    flex-direction: column;
+
+  .footer__nav {
+    grid-row: 2;
+  }
+
+  .footer__contact-list {
+    grid-row: 2;
+  }
+
+  .footer__social {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+
+  .footer__social-links {
     justify-content: center;
-    width: 80%;
-    height: auto;
-    margin: auto;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  #main-footer div .contact-list {
-    display: flex;
-    width: 60%;
-    margin: 0 auto;
-    padding: 3rem 0;
-  }
-  #main-footer div .contact-list li figure {
-    padding: 0;
-    width: 100%;
-  }
-  #main-footer div .contact-list li figure img {
-    width: 20%;
-  }
-  #main-footer div .contact-list li figure figcaption p {
-    word-break: break-all;
+
+  .footer__logo {
+    grid-column: span 1;
+    margin-bottom: 2rem;
   }
 
-  #main-footer div img {
-    height: auto;
-    width: 30%;
-    object-fit: contain;
-    margin: 2.5% auto;
+  .footer__nav {
+    grid-row: auto;
+    margin-bottom: 2rem;
   }
-  #main-footer div .redes {
-    padding: 2em;
+
+  .footer__nav-list {
+    align-items: center;
+  }
+
+  .footer__contact-list {
+    grid-row: auto;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+
+  .footer__contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__social {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .footer__social-links {
+    justify-content: center;
   }
 }

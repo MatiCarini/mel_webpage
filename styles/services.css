@@ -1,146 +1,142 @@
-#servicios {
+/* ==========================================================================
+   SERVICES SECTION STYLES
+   ========================================================================== */
+
+.services {
   height: auto;
-}
-#servicios div {
-  width: 100%;
-  margin: auto;
+  padding: 2rem 0;
 }
 
-#servicios div h2 {
+.services__container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.services__heading {
+  width: 100%;
   text-align: center;
   padding: 2rem;
-  font-size: 2.3rem;
-  background-color: #234;
-  color: white;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  margin-bottom: 1rem;
 }
-#servicios div h3 {
+
+.services__subheading {
   text-align: center;
   text-transform: uppercase;
-  padding: 3rem;
-  font-size: 2rem;
-  color: #123;
-  font-weight: 100;
+  padding: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--color-dark);
+  font-weight: 300;
 }
-#servicios div ul {
+
+.services__list {
   list-style: none;
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  justify-content: space-between;
-  color: #345;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 85%;
+  margin: 0 auto 3rem;
+  padding: 1rem;
 }
-#servicios div ul li {
-  width: 23%;
+
+.services__item {
+  background: var(--color-light);
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px #1235;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
-#servicios div ul li figure {
+
+.services__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.services__figure {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.services__image {
+  width: 35%;
+  max-width: 100px;
+  height: auto;
+  margin: 1rem auto;
+  object-fit: contain;
+}
+
+.services__figcaption {
+  flex: 1;
+  display: flex;
   flex-direction: column;
 }
-#servicios div ul li figure img {
-  width: 35%;
-  margin: 1.5rem auto;
-}
-#servicios div ul li figure figcaption h4 {
+
+.services__title {
   text-align: center;
-  font-size: 1.2em;
-  padding: 0 3rem;
-  padding-bottom: 1rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  padding: 0 1rem 1rem;
+  color: var(--color-primary);
 }
-#servicios div ul li figure figcaption p {
-  padding: 2rem;
-  padding-top: 0.5rem;
-  text-align: center;
+
+.services__description {
+  padding: 0 1rem 1rem;
+  text-align: justify;
   hyphens: auto;
+  line-height: 1.6;
+  flex: 1;
 }
 
-@media ((min-width: 768px ) and ( max-width: 1024px)) {
-  #servicios {
-    width: 100vw;
-    height: auto;
-  }
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
 
-  #servicios div h2 {
-    width: 100%;
-    padding: 2.5%;
-  }
-  #servicios div h3 {
-    margin: 1rem 0;
-  }
-
-  #servicios div ul {
-    display: grid;
+@media (max-width: 1024px) {
+  .services__list {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 75%;
-    gap: 1.5rem 2rem;
-    padding: 1rem;
-    margin-bottom: 4em;
-  }
-  #servicios div ul li {
-    width: 100%;
-  }
-  #servicios div ul li figure {
-    display: flex;
-    width: 100%;
+    gap: 1.5rem;
+    width: 85%;
   }
 
-  #servicios div ul li figure img {
-    margin: 2rem auto;
-    width: 35%;
+  .services__item {
+    margin-bottom: 1rem;
   }
-  #servicios div ul li figure figcaption h4 {
-    padding: 0 2rem;
-    padding-bottom: 0.7rem;
-  }
-  #servicios div ul li figure figcaption p {
-    padding: 0 3rem;
-    padding-bottom: 2rem;
+
+  .services__image {
+    width: 30%;
+    margin: 1.5rem auto;
   }
 }
 
 @media (max-width: 768px) {
-  #servicios {
-    width: 100vw;
-    height: auto;
-  }
-  #servicios div {
-    width: 100%;
-    padding-bottom: 4rem;
-  }
-  #servicios div h2 {
-    padding: 2rem;
-    font-size: 1.8rem;
-  }
-  #servicios div h3 {
-    padding: 3rem 0;
+  .services__list {
+    grid-template-columns: 1fr;
+    width: 80%;
+    gap: 2rem;
   }
 
-  #servicios div ul {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    gap: 3rem;
-  }
-  #servicios div ul li {
-    width: 100%;
-  }
-  #servicios div ul li figure {
-    margin: 1rem 0;
+  .services__heading {
+    padding: 1.5rem;
   }
 
-  #servicios div ul li figure img {
+  .services__subheading {
+    padding: 1.5rem 0;
+  }
+
+  .services__image {
+    width: 25%;
     margin: 1rem auto;
-    width: 40%;
-    padding: 0;
   }
 
-  #servicios div ul li figure figcaption {
-    margin: 0;
+  .services__title {
+    padding: 0 0.5rem 0.5rem;
   }
-  #servicios div ul li figure figcaption h4 {
-    padding-bottom: 1rem;
+
+  .services__description {
+    padding: 0 0.5rem 1rem;
   }
 }

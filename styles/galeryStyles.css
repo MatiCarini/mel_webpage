@@ -1,174 +1,275 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-html,
-body {
-  scroll-behavior: smooth;
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch;
-}
+/* ==========================================================================
+   GALLERY PAGE STYLES
+   ========================================================================== */
 
-section {
-  text-align: center;
-  font-family: sans-serif;
-}
+/* Variables */
 
-#hero {
-  margin-top: 15vh;
+/* Base Styles */
+.gallery-page-heading {
+  margin-top: var(--header-height);
   height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#0007, #012a),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(1, 34, 68, 0.8)),
     url("../images/galeria/MecanizadoCNC1.jpg") no-repeat center/cover;
   background-position-y: 45%;
-  color: white;
-}
-#hero h2 {
-  font-size: 4rem;
-  text-shadow: -3px 7px 5px #000;
-}
-section h3 {
-  font-size: 2.5rem;
-  padding: 5rem 0;
-}
-#theme {
-  width: 100vw;
+  color: var(--color-light);
 }
 
-#theme div {
+.gallery-page-heading h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-shadow: -3px 7px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Gallery Sections */
+.gallery-page-section {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.gallery-page-section h2,
+.gallery-page-overhauling .content {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  padding: 2rem 0;
+  color: var(--color-primary);
+}
+
+/* Gallery Grid */
+.gallery-page-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  gap: 1rem;
-  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  width: 70%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 1rem 0;
 }
 
-#theme div figure {
-  box-shadow: 0 0 5px #000;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 60vh;
+.gallery-page-card {
   position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4/3;
+  transition: var(--transition);
 }
-#theme div figure img {
+
+.gallery-page-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-page-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: var(--transition);
 }
-#theme div figure figcaption {
-  display: none;
+
+.gallery-page-caption {
   position: absolute;
   top: 0;
-  background: linear-gradient(#000a, #012c);
-  height: 100%;
+  left: 0;
   width: 100%;
-  color: white;
-  font-size: 1.8rem;
-  transition: all 0.3 ease;
-}
-#theme div figure:hover figcaption {
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(1, 34, 68, 0.8));
+  color: var(--color-light);
+  opacity: 0;
+  transition: var(--transition);
+  padding: 1rem;
+  text-align: center;
 }
-#theme div figure figcaption p {
-  padding: 1rem 2rem;
-  height: fit-content;
-  align-self: center;
+
+.gallery-page-card:hover .gallery-page-caption,
+.gallery-page-overhauling-card:hover .gallery-page-caption {
+  opacity: 1;
+}
+
+.gallery-page-caption p {
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  line-height: 1.4;
+}
+
+/* Before-After Section */
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.before-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Instagram Link */
+.instagram-link {
+  padding: 2rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  text-align: center;
+}
+
+.instagram-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.instagram-link a:hover,
+.instagram-link a:focus {
+  color: var(--color-dark);
+  text-decoration: underline;
+  outline: none;
+}
+.gallery-page-overhauling-section {
+  border: 1px solid red;
+}
+.gallery-page-overhauling-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 70%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 1rem 0;
 }
 
-#overhauling {
-  width: 100vw;
+.gallery-page-overhauling {
+  width: 100%;
+  padding: 3rem 0;
 }
 
-#overhauling .content {
+.gallery-page-overhauling .content {
   width: 80%;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem 0;
+  gap: 2rem;
 }
-#overhauling div figure {
+
+.gallery-page-overhauling-card {
   width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: var(--transition);
 }
-#overhauling div figure div {
+
+.gallery-page-overhauling-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-page-overhauling-images {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  gap: 1%;
 }
-#overhauling div figure div img {
-  box-shadow: 0 0 5px #000;
+
+.gallery-page-overhauling-images img {
   width: 49.5%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
   object-fit: cover;
   object-position: center;
+  box-shadow: var(--shadow);
 }
 
-#overhauling div figure figcaption {
+.gallery-page-overhauling-caption {
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
   text-align: start;
-  color: white;
-  background-color: #234;
-}
-#overhauling p {
-  padding: 3rem;
-  font-size: 1.8rem;
-  font-family: sans-serif;
-}
-#overhauling p a {
-  color: black;
-}
-#overhauling p a:hover {
-  font-weight: bolder;
-  text-decoration: none;
+  color: var(--color-light);
+  background-color: var(--color-primary);
 }
 
-@media ((min-width: 0 ) and ( max-width: 1024px)) {
-  #theme div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto auto;
+.gallery-page-overhauling-instagram {
+  padding: 2rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+.gallery-page-overhauling-instagram a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.gallery-page-overhauling-instagram a:hover,
+.gallery-page-overhauling-instagram a:focus {
+  font-weight: bold;
+  outline: none;
+}
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .gallery-page-grid {
+    width: 95%;
+    gap: 1rem;
+  }
+
+  .before-after {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .gallery-page-overhauling .content {
+    width: 80%;
+  }
+
+  .gallery-page-overhauling-images {
     gap: 0.5rem;
   }
-  #overhauling div figure {
-    box-shadow: 0 0 5px #000;
-  }
-  #overhauling div figure div img {
+
+  .gallery-page-overhauling-images img {
     width: 50%;
-    box-shadow: none;
   }
 }
 
 @media (max-width: 768px) {
-  #theme div {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    gap: 3rem 0;
+  .gallery-page-heading {
+    height: 30vh;
   }
-  #overhauling div figure {
-    box-shadow: none;
+
+  .gallery-page-grid {
+    width: 85%;
+    grid-template-columns: 1fr;
   }
-  #overhauling div figure div {
+
+  .gallery-page-card {
+    aspect-ratio: 3/2;
+  }
+
+  .instagram-link {
+    padding: 1.5rem;
+  }
+
+  .gallery-page-overhauling .content {
+    width: 90%;
+  }
+
+  .gallery-page-overhauling-images {
     flex-direction: column;
-    box-shadow: none;
     gap: 0.5rem;
   }
-  #overhauling div figure div img {
+
+  .gallery-page-overhauling-images img {
     width: 100%;
-    height: 95%;
-    box-shadow: 0 0 5px #000;
   }
-  #overhauling p {
-    font-size: 1.4rem;
-    font-family: sans-serif;
+
+  .gallery-page-overhauling-instagram {
+    padding: 1.5rem;
   }
 }
