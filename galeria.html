@@ -195,38 +195,53 @@
     <!-- Footer -->
     <footer id="main-footer">
       <div class="footer-container">
-        <img class="footer-logo" src="./images/11-gris.svg" alt="logo" />
-        <nav aria-label="footer-navigation" class="footer-navigation">
-          <ul class="footer-list">
+        <img src="./images/11-gris.svg" alt="logo" />
+        <nav aria-label="footer-navigation">
+          <ul class="nav-list">
             <li><a class="link" href="#nosotros">Nosotros</a></li>
             <li><a class="link" href="#servicios">Servicios</a></li>
             <li><a class="link" href="#galeria">Galeria</a></li>
             <li><a class="link" href="#contacto">Contacto</a></li>
           </ul>
         </nav>
-        <div class="contact-container">
-          <div class="footer-phone">
-            <img src="./images/whatsapp.png" alt="" />
-            <p>
-              Matias
-              <a href="https://wa.me/5492324541053" target="_blank"
-                >+5492324541053</a
-              >
-              | Fausto
-              <a href="https://wa.me/5492324673966" target="_blank"
-                >+5492324673966</a
-              >
-            </p>
-          </div>
-          <div class="footer-mail">
-            <img src="./images/mail.svg" alt="" />
-            <p>metalurgicalobato@gmail.com</p>
-          </div>
-          <div class="footer-location">
-            <img src="./images/location.svg" alt="" />
-            <p class="footer-address">Calle 15 y 102, Mercedes, Buenos Aires</p>
-          </div>
-        </div>
+        <ul class="contact-list">
+          <li class="contact-card">
+            <figure>
+              <img src="/images/whatsapp.webp" alt="" />
+              <figcaption class="contact-card-content">
+                <p>
+                  <a href="https://wa.me/5492324541053" target="_blank"
+                    >+5492324541053</a
+                  >
+                </p>
+                <p>
+                  <a href="https://wa.me/5492324673966" target="_blank"
+                    >+5492324673966</a
+                  >
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="contact-card">
+            <figure>
+              <img src="/images/mail.svg" alt="" />
+              <figcaption class="contact-card-content">
+                <p>metalurgicalobato@gmail.com</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="contact-card">
+            <figure>
+              <img src="/images/location.svg" alt="" />
+              <figcaption class="contact-card-content">
+                <p>
+                  Calle 15 y 102 <br />
+                  Mercedes, Buenos Aires
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
         <div class="redes">
           <a
             href="https://www.instagram.com/metalurgicalobato/"
@@ -234,12 +249,15 @@
           >
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/metalurgica-lobato-575750133/"
+            target="_blank"
+          >
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
-      <p class="footer-rights">Metalúrgica Eduardo Lobato e hijos. © 2025</p>
+      <p>Metalúrgica Eduardo Lobato e hijos. © 2025</p>
     </footer>
   </body>
   <script type="text/javascript" src="headerController.js"></script>
