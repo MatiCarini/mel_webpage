@@ -109,7 +109,7 @@
   }
 
   .hero__logo {
-    width: 50%;
+    width: 70%;
     margin: 1rem auto;
   }
 
@@ -125,11 +125,11 @@
 
 @media (max-width: 768px) {
   .hero__logo {
-    width: 70%;
+    width: 98%;
   }
 
   .hero__cta {
-    height: 50%;
+    height: 60%;
   }
 
   .hero__content {

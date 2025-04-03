@@ -82,7 +82,6 @@ body {
   line-height: 1.6;
   overflow-y: auto;
   text-align: center;
-  width: 100vh;
 }
 
 img {
@@ -101,7 +100,7 @@ iframe {
    COMPONENTES REUTILIZABLES
    ========================================================================== */
 section {
-  width: 100%;
+  width: 100vw;
   scroll-margin-top: var(--header-height-scrolled);
 }
 
