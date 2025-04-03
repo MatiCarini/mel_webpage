@@ -26,6 +26,7 @@
 }
 
 .hero__logo {
+  filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.7));
   width: 50%;
   max-width: 700px;
   height: auto;
