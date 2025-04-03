@@ -4,7 +4,6 @@
 
 .contact {
   width: 100%;
-  min-height: 90vh;
   display: flex;
   flex-direction: row-reverse;
   padding: 2rem;
