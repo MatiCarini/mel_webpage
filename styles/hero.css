@@ -28,7 +28,7 @@
 .hero__logo {
   filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.7));
   width: 50%;
-  max-width: 700px;
+  max-width: 600px;
   height: auto;
   margin: auto;
   object-fit: contain;
@@ -41,7 +41,7 @@
   align-items: center;
   color: inherit;
   text-decoration: none;
-  height: 40%;
+  height: 60%;
   min-height: 200px;
   width: 100%;
   position: absolute;
@@ -67,7 +67,7 @@
 
 .hero__title {
   font-weight: 300;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.3;
 }
 
