@@ -1,52 +1,26 @@
-/* ==========================================================================
-   GALLERY PAGE STYLES
-   ========================================================================== */
-
-/* Variables */
-
-/* Base Styles */
-.gallery-page-heading {
-  margin-top: var(--header-height);
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(1, 34, 68, 0.8)),
-    url("../images/galeria/MecanizadoCNC1.jpg") no-repeat center/cover;
-  background-position-y: 45%;
-  color: var(--color-light);
-}
-
-.gallery-page-heading h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  text-shadow: -3px 7px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Gallery Sections */
-.gallery-page-section {
+.gallery-section {
   width: 100%;
   padding: 3rem 0;
+  color: var(--color-dark);
+  background: var(--color-grey);
 }
-
-.gallery-page-section h2,
-.gallery-page-overhauling .content {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  padding: 2rem 0;
-  color: var(--color-primary);
+.gallery-section h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
-
 /* Gallery Grid */
-.gallery-page-grid {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  width: 70%;
+  width: 80%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 0;
 }
 
-.gallery-page-card {
+.gallery-card {
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -55,12 +29,12 @@
   transition: var(--transition);
 }
 
-.gallery-page-card:hover {
+.gallery-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gallery-page-card img {
+.gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -68,7 +42,7 @@
   transition: var(--transition);
 }
 
-.gallery-page-caption {
+.gallery-caption {
   position: absolute;
   top: 0;
   left: 0;
@@ -85,14 +59,15 @@
   text-align: center;
 }
 
-.gallery-page-card:hover .gallery-page-caption,
-.gallery-page-overhauling-card:hover .gallery-page-caption {
+.gallery-card:hover .gallery-caption,
+.gallery-overhauling-card:hover .gallery-caption {
   opacity: 1;
 }
 
-.gallery-page-caption p {
-  font-size: clamp(1rem, 1.5vw, 1.4rem);
+.gallery-caption p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.4;
+  color: var(--color-white);
 }
 
 /* Before-After Section */
@@ -112,7 +87,6 @@
 /* Instagram Link */
 .instagram-link {
   padding: 2rem;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-align: center;
 }
 
@@ -129,10 +103,8 @@
   text-decoration: underline;
   outline: none;
 }
-.gallery-page-overhauling-section {
-  border: 1px solid red;
-}
-.gallery-page-overhauling-grid {
+
+.gallery-overhauling-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -142,12 +114,19 @@
   padding: 1rem 0;
 }
 
-.gallery-page-overhauling {
+.gallery-overhauling {
   width: 100%;
   padding: 3rem 0;
+  color: var(--color-dark);
+  background: var(--color-grey);
+  text-align: center;
 }
 
-.gallery-page-overhauling .content {
+.gallery-overhauling h2 {
+  font-size: 2rem;
+}
+
+.gallery-overhauling .content {
   width: 80%;
   max-width: 1400px;
   margin: 0 auto;
@@ -156,28 +135,28 @@
   gap: 2rem;
 }
 
-.gallery-page-overhauling-card {
+.gallery-overhauling-card {
   width: 100%;
-  box-shadow: var(--shadow);
   border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: var(--shadow);
   transition: var(--transition);
+  background: var(--color-white);
 }
 
-.gallery-page-overhauling-card:hover {
+.gallery-overhauling-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gallery-page-overhauling-images {
+.gallery-overhauling-images {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 1%;
 }
 
-.gallery-page-overhauling-images img {
-  width: 49.5%;
+.gallery-overhauling-images img {
+  width: 50%;
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
@@ -185,29 +164,27 @@
   box-shadow: var(--shadow);
 }
 
-.gallery-page-overhauling-caption {
+.gallery-overhauling-caption {
   padding: 1rem;
-  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
   text-align: start;
-  color: var(--color-light);
-  background-color: var(--color-primary);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--color-white);
+  background-color: var(--color-dark);
 }
 
-.gallery-page-overhauling-instagram {
+.gallery-overhauling-instagram {
   padding: 2rem;
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-align: center;
-  font-family: var(--font-main);
 }
 
-.gallery-page-overhauling-instagram a {
+.gallery-overhauling-instagram a {
   color: var(--color-text);
-  text-decoration: none;
   transition: var(--transition);
 }
 
-.gallery-page-overhauling-instagram a:hover,
-.gallery-page-overhauling-instagram a:focus {
+.gallery-overhauling-instagram a:hover,
+.gallery-overhauling-instagram a:focus {
   font-weight: bold;
   outline: none;
 }
@@ -216,60 +193,61 @@
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  .gallery-page-grid {
-    width: 95%;
+  .gallery-grid {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-
-  .before-after {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  .gallery-card:nth-child(9) {
+    margin: 0 auto;
+    grid-column: 1 / span 2;
+    width: 50%;
   }
-  .gallery-page-overhauling .content {
+  .gallery-overhauling .content {
     width: 80%;
   }
 
-  .gallery-page-overhauling-images {
+  .gallery-overhauling-images {
     gap: 0.5rem;
   }
 
-  .gallery-page-overhauling-images img {
+  .gallery-overhauling-images img {
     width: 50%;
   }
 }
 
 @media (max-width: 768px) {
-  .gallery-page-heading {
+  .gallery-heading {
     height: 30vh;
   }
 
-  .gallery-page-grid {
+  .gallery-grid {
     width: 85%;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
-
-  .gallery-page-card {
-    aspect-ratio: 3/2;
+  .gallery-card:nth-child(9) {
+    margin: 0 auto;
+    width: 100%;
   }
-
   .instagram-link {
     padding: 1.5rem;
   }
 
-  .gallery-page-overhauling .content {
+  .gallery-overhauling .content {
     width: 90%;
   }
 
-  .gallery-page-overhauling-images {
+  .gallery-overhauling-images {
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  .gallery-page-overhauling-images img {
+  .gallery-overhauling-images img {
     width: 100%;
   }
 
-  .gallery-page-overhauling-instagram {
+  .gallery-overhauling-instagram {
     padding: 1.5rem;
   }
 }

@@ -1,0 +1,74 @@
+/* Estilos base */
+.features {
+  padding: 5rem 0;
+  color: var(--color-dark);
+  background: var(--color-grey);
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  margin: auto;
+  gap: 2rem;
+  list-style: none;
+}
+
+.feature-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+.feature-item p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item img {
+  width: clamp(3rem, 5vw, 4rem);
+  object-fit: contain;
+}
+.feature-header {
+  display: flex;
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.feature-header h4 {
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  display: flex;
+  text-align: start;
+}
+/* Media Queries */
+@media (max-width: 1292px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+
+  .features {
+    padding: 3rem 0;
+  }
+}

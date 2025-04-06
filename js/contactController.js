@@ -1,6 +1,6 @@
 window.onload = function () {
   emailjs.init({
-    publicKey: "PRhhMTihIlDgfA-qY",
+    publicKey: "XNcrD3C9MgUOTXfDL",
   });
   document
     .getElementById("contact-form")

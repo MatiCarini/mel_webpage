@@ -1,0 +1,83 @@
+/* Reset y variables */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("header.css");
+@import url("hero.css");
+@import url("features.css");
+@import url("about-us.css");
+@import url("industries.css");
+@import url("galeryStyles.css");
+@import url("galery.css");
+@import url("contact.css");
+@import url("footer.css");
+
+@font-face {
+  font-family: "Nominal-BRK";
+  src: url("../assets/fonts/webfonts_Nominal-BRK/Nominal-BRK.ttf.woff")
+      format("woff"),
+    url("../assets/fonts/webfonts_Nominal-BRK/Nominal-BRK.ttf.svg")
+      format("svg"),
+    url("../assets/fonts/webfonts_Nominal-BRK/Nominal-BRK.ttf.eot"),
+    url("../assets/fonts/webfonts_Nominal-BRK/Nominal-BRK.ttf.eot")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* COLORES  */
+  --color-black: #01021d;
+  --color-dark: #0d172d;
+  --color-blue-primary: #012244;
+  --color-blue-dark: #132253;
+  --color-blue-light: #848dbf;
+  --color-light: #c2cef2;
+  --color-grey: #dedfdf;
+  --color-white: #f2f2f2;
+  --color-accent: #2aaf62;
+  --color-light-transluscent: #f2f2f2;
+  --hero-overlay: linear-gradient(#c0d7f777, var(--color-dark));
+  --hero-overlay-light: linear-gradient(#c0d7f722, #0d0d0e88);
+  --industries-overlay: linear-gradient(
+    var(--color-light),
+    var(--color-blue-light)
+  );
+  --image-overlay: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.9),
+    var(--color-blue-dark)
+  );
+
+  --max-width: 1200px;
+
+  --logo-font: "Nominal-BRK";
+  --scroll-margin: 100px;
+
+  --shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  --shadow-left: -8px 0 10px -5px rgba(0, 0, 0, 0.5);
+  --shadow-top: 0 -8px 10px -5px rgba(0, 0, 0, 0.5);
+
+  --header-height: 15vh;
+  --header-height-scrolled: 12vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+}
+section {
+  scroll-margin: var(--scroll-margin);
+}
+
+p {
+  hyphens: auto;
+}

@@ -1,0 +1,35 @@
+/* Estilos base */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  color: var(--color-white);
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+  .social-links {
+    gap: 1rem;
+  }
+}
