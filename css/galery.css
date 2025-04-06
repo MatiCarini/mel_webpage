@@ -1,6 +1,6 @@
 .gallery-section {
   width: 100%;
-  padding: 3rem 0;
+  padding-top: 5rem;
   color: var(--color-dark);
   background: var(--color-grey);
 }
@@ -12,36 +12,32 @@
 /* Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  width: 80%;
-  max-width: 1400px;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: 30% 30% 30%;
+  gap: 1rem;
   margin: 0 auto;
-  padding: 1rem 0;
+  width: 80%;
 }
 
 .gallery-card {
-  position: relative;
   border-radius: 0.5rem;
+  position: relative;
   overflow: hidden;
   box-shadow: var(--shadow);
-  aspect-ratio: 4/3;
   transition: var(--transition);
 }
 
-.gallery-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
 .gallery-card img {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
   object-fit: cover;
   object-position: center;
   transition: var(--transition);
 }
-
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
 .gallery-caption {
   position: absolute;
   top: 0;
@@ -54,13 +50,12 @@
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(1, 34, 68, 0.8));
   color: var(--color-light);
   opacity: 0;
-  transition: var(--transition);
   padding: 1rem;
   text-align: center;
+  transition: var(--transition);
 }
 
-.gallery-card:hover .gallery-caption,
-.gallery-overhauling-card:hover .gallery-caption {
+.gallery-card:hover .gallery-caption {
   opacity: 1;
 }
 
@@ -68,20 +63,6 @@
   font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.4;
   color: var(--color-white);
-}
-
-/* Before-After Section */
-.before-after {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  height: 100%;
-}
-
-.before-after img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* Instagram Link */
@@ -103,20 +84,9 @@
   text-decoration: underline;
   outline: none;
 }
-
-.gallery-overhauling-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  width: 70%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
 .gallery-overhauling {
   width: 100%;
-  padding: 3rem 0;
+  padding-bottom: 5rem;
   color: var(--color-dark);
   background: var(--color-grey);
   text-align: center;
@@ -124,11 +94,12 @@
 
 .gallery-overhauling h2 {
   font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 .gallery-overhauling .content {
   width: 80%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -141,7 +112,6 @@
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
-  background: var(--color-white);
 }
 
 .gallery-overhauling-card:hover {
@@ -151,21 +121,18 @@
 
 .gallery-overhauling-images {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .gallery-overhauling-images img {
   width: 50%;
-  height: auto;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   box-shadow: var(--shadow);
 }
 
 .gallery-overhauling-caption {
   padding: 1rem;
+
   text-align: start;
   font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--color-white);
@@ -194,53 +161,40 @@
 
 @media (max-width: 1024px) {
   .gallery-grid {
-    width: 80%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(5, 15%);
     gap: 1rem;
   }
   .gallery-card:nth-child(9) {
-    margin: 0 auto;
     grid-column: 1 / span 2;
-    width: 50%;
+    justify-self: center;
   }
   .gallery-overhauling .content {
     width: 80%;
-  }
-
-  .gallery-overhauling-images {
-    gap: 0.5rem;
-  }
-
-  .gallery-overhauling-images img {
-    width: 50%;
   }
 }
 
 @media (max-width: 768px) {
-  .gallery-heading {
-    height: 30vh;
-  }
-
-  .gallery-grid {
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-  }
-  .gallery-card:nth-child(9) {
-    margin: 0 auto;
-    width: 100%;
-  }
   .instagram-link {
     padding: 1.5rem;
   }
-
-  .gallery-overhauling .content {
-    width: 90%;
+  .gallery-grid {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(9, 10%);
+    gap: 1rem;
   }
-
+  .gallery-card {
+    overflow: hidden;
+  }
+  .gallery-card:nth-child(9) {
+    grid-column: 1;
+    grid-row: 9;
+  }
+  .gallery-overhauling .content {
+    width: 80%;
+  }
   .gallery-overhauling-images {
     flex-direction: column;
-    gap: 0.5rem;
   }
 
   .gallery-overhauling-images img {

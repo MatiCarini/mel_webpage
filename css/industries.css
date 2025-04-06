@@ -4,10 +4,11 @@
 
 .industries {
   width: 100%;
-  padding: 4rem 0;
+  padding: 5rem 0;
   text-align: center;
   color: var(--color-dark);
   background-color: var(--color-grey);
+  padding-bottom: 6rem;
 }
 .industries__container {
   text-align: center;

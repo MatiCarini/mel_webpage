@@ -1,6 +1,6 @@
 /* Estilos base */
 .features {
-  padding: 5rem 0;
+  padding-top: 5rem;
   color: var(--color-dark);
   background: var(--color-grey);
 }

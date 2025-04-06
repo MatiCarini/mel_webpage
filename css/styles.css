@@ -5,7 +5,6 @@
 @import url("features.css");
 @import url("about-us.css");
 @import url("industries.css");
-@import url("galeryStyles.css");
 @import url("galery.css");
 @import url("contact.css");
 @import url("footer.css");
@@ -58,6 +57,7 @@
 
   --header-height: 15vh;
   --header-height-scrolled: 12vh;
+  --transition: all 0.3s ease;
 }
 
 * {
