@@ -41,6 +41,7 @@
   font-weight: 400;
 }
 
+.about__list,
 .about__text {
   font-weight: 300;
   width: 80%;
@@ -49,7 +50,9 @@
   color: var(--color-white);
   line-height: 1.6;
 }
-
+.about__list {
+  list-style: none;
+}
 .about__continue {
   position: absolute;
   bottom: 1rem;
