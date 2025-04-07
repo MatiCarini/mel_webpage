@@ -17,6 +17,7 @@
 .footer-nav {
   display: flex;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .footer-logo {
   width: 60%;
@@ -44,6 +45,7 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
+  margin-bottom: 1rem;
 }
 .footer-contact-info figure {
   display: flex;
