@@ -129,7 +129,7 @@ textarea::placeholder {
   }
   .contact-info figure {
     hyphens: auto;
-    width: 55%;
+    width: 90%;
     margin: 0 auto;
     justify-content: center;
   }

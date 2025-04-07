@@ -18,7 +18,16 @@
   justify-content: space-around;
   align-items: center;
 }
-
+.logo {
+  font-family: var(--logo-font);
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: var(--transition);
+}
+.logo:hover {
+  scale: 1.1;
+}
 .header-logo {
   height: 100%;
   display: flex;
