@@ -1,6 +1,11 @@
+require("dotenv").config();
+
+const emailKey = process.env.EMAIL_KEY;
+
+
 window.onload = function () {
   emailjs.init({
-    publicKey: "PRhhMTihIlDgfA-qY",
+    publicKey: emailKey,
   });
   document
     .getElementById("contact-form")
