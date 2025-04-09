@@ -1,4 +1,4 @@
-require("dotenv").config();
+import { process } from "dotenv";
 const emailKey = process.env.EMAIL_DEV_KEY;
 
 window.onload = function () {
