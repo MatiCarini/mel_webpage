@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 const emailKey = process.env.EMAIL_DEV_KEY;
 
 window.onload = function () {
