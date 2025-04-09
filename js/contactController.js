@@ -1,4 +1,5 @@
-const emailKey = "XNcrD3C9MgUOTXfDL";
+import Dotenv from "dotenv";
+const emailKey = Dotenv.process.env.EMAIL_DEV_KEY;
 
 window.onload = function () {
   emailjs.init({
