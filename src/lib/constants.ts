@@ -90,3 +90,13 @@ En Metalúrgica Lobato nos dedicamos al mecanizado de precisión y fabricación 
 
 export const CODE_AUTOR =
   "Desarrollado por Matias Carini - maticarinidev@gmail.com";
+
+export const SERVICE_AREAS = [
+  "Mercedes",
+  "Luján",
+  "Chivilcoy",
+  "Suipacha",
+  "San Andrés de Giles",
+  "Moreno",
+  "General Rodríguez",
+];
