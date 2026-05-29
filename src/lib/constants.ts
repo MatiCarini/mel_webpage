@@ -8,8 +8,8 @@ export const SITE_CONFIG = {
   ],
   address: "Calle 15 y 102, Mercedes, Buenos Aires",
   instagram: "https://www.instagram.com/metalurgicalobato/",
+  resena_link: { url: "https://g.page/r/CUFwnX3lt21LEBM/review" },
 };
-
 export const NAV_LINKS = [
   { label: "Servicios", href: "#servicios" },
   { label: "Nosotros", href: "#nosotros" },

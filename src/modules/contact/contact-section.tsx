@@ -1,6 +1,14 @@
 import { SITE_CONFIG } from "@/lib/constants";
 import { ContactForm } from "./contact-form";
-import { MapPin, Phone, Mail, Clock, ArrowUpRight } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  ArrowUpRight,
+  MessageSquareText,
+  Star,
+} from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -32,6 +40,31 @@ export function ContactSection() {
 
         {/* Formulario + Datos */}
         <div className="flex flex-col gap-8">
+          {/* Banner de reseña para clientes */}
+          <a
+            href={SITE_CONFIG.resena_link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-[#f8f9fc] rounded-2xl p-5 border border-[#e0e2ed] hover:border-[#2aaf62]/40 hover:shadow-lg hover:shadow-[#2aaf62]/5 transition-all duration-300 group"
+          >
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-[#2aaf62]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2aaf62]/20 transition-colors duration-300">
+                <Star className="h-5 w-5 text-[#2aaf62]" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-semibold text-[#01021d] text-sm mb-1 group-hover:text-[#2aaf62] transition-colors duration-300">
+                  ¿Ya trabajaste con nosotros?
+                </h4>
+                <p className="text-[#4a4f6a] text-xs leading-relaxed">
+                  Tu opinión ayuda a que más industrias confíen en nuestro
+                  trabajo. Dejanos tu reseña en Google.
+                </p>
+              </div>
+              <div className="w-10 h-10 rounded-xl bg-[#2aaf62]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2aaf62] transition-colors duration-300">
+                <MessageSquareText className="h-4 w-4 text-[#2aaf62] group-hover:text-white transition-colors duration-300" />
+              </div>
+            </div>
+          </a>
           {/* Formulario */}
           <div className="bg-[#f8f9fc] rounded-2xl p-6 md:p-8 border border-[#e0e2ed]">
             <h3 className="text-lg font-bold text-[#01021d] mb-5">
