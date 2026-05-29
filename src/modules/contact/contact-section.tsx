@@ -26,8 +26,8 @@ export function ContactSection() {
         {/* Mapa */}
         <div className="rounded-2xl overflow-hidden border border-[#e0e2ed] shadow-lg h-[400px] lg:h-full min-h-[400px]">
           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d859.2290397987514!2d-59.42850517764196!3d-34.66201569614791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc73dcc59c1895%3A0x4b6db7e57d9d7041!2sMetal%C3%BArgica%20Eduardo%20Lobato%20e%20Hijos!5e0!3m2!1ses!2sar!4v1780090310976!5m2!1ses!2sar"
             title="Ubicación Metalúrgica Lobato"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1388.46258627731!2d-59.42991974168382!3d-34.66186103884534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc73086357bf09%3A0x40ab8e6adf610baf!2sC.%20102%20%26%20C.%2015%2C%20Mercedes%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1733071137801!5m2!1ses!2sar"
             width="100%"
             height="100%"
             style={{ border: 0 }}
