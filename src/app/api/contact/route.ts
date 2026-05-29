@@ -24,25 +24,19 @@ export async function POST(request: Request) {
     });
 
     await transporter.sendMail({
-      from: `"${nombre} (vía web)" <${process.env.SMTP_USER}>`,
-      replyTo: `"${nombre}" <${email}>`,
+      from: process.env.SMTP_FROM,
+      replyTo: `${nombre} <${email}>`,
       to: process.env.CONTACT_EMAIL,
-      subject: `Nueva consulta web - ${nombre}`,
+      subject: `Consulta web - ${nombre}`,
+      text: `Nombre: ${nombre}\nEmail: ${email}\nTelefono: ${
+        telefono || "No especificado"
+      }\n\nMensaje:\n${mensaje}`,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #01021d;">Nueva consulta desde metalurgicalobato.com.ar</h2>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 8px 0; color: #4a4f6a;"><strong>Nombre:</strong></td><td>${nombre}</td></tr>
-            <tr><td style="padding: 8px 0; color: #4a4f6a;"><strong>Email:</strong></td><td><a href="mailto:${email}">${email}</a></td></tr>
-            <tr><td style="padding: 8px 0; color: #4a4f6a;"><strong>Teléfono:</strong></td><td>${
-              telefono || "No especificado"
-            }</td></tr>
-          </table>
-          <div style="margin-top: 16px; padding: 16px; background: #f8f9fc; border-radius: 8px;">
-            <p style="color: #4a4f6a;"><strong>Mensaje:</strong></p>
-            <p style="color: #01021d;">${mensaje.replace(/\n/g, "<br>")}</p>
-          </div>
-        </div>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefono:</strong> ${telefono || "No especificado"}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${mensaje}</p>
       `,
     });
 
